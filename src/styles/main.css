@@ -329,6 +329,7 @@ body {
 .edit-recipe-form textarea {
   resize: none;
   min-height: 100px;
+  max-width: 460px;
 }
 
 .save-btn {
@@ -564,7 +565,6 @@ body {
   border-radius: 4px;
   font-size: 1rem;
   min-height: 100px;
-  overflow: hidden;
   resize: none;
   transition: height 0.2s ease-in-out;
 }

@@ -347,6 +347,7 @@ body {
   .edit-recipe-form textarea {
     resize: none; // Neleidžia ištempti į šonus
     min-height: 100px;
+    max-width: 460px;
   }
   
   .save-btn {
@@ -594,7 +595,6 @@ body {
   border-radius: 4px;
   font-size: 1rem;
   min-height: 100px; // Fiksuotas pradinis aukštis
-  overflow: hidden; // Paslepia nereikalingą scrollbarą
   resize: none; // Neleidžia tempimo rankiniu būdu
   transition: height 0.2s ease-in-out; // Sklandi animacija
 }
