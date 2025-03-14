@@ -108,18 +108,17 @@ body {
 
   .search-container {
     display: flex;
-    justify-content: center;  // Centruoja horizontaliai
-    align-items: center;  // Užtikrina gerą vertikalią padėtį
-    flex-direction: column;  // Užtikrina, kad tekstas ir input būtų vienas po kitu
-    text-align: center;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center; // Užtikrina, kad visi elementai būtų per vidurį
+    position: relative; // Svarbu, kad dropdown būtų išlygiuotas pagal šį konteinerį
+    width: 100%;
   }
 
   .search-bar {
     width: 100%;
     max-width: 400px;
     padding: 10px;
-    margin: 0 auto 20px;
+    margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -136,7 +135,34 @@ body {
     color: #ff0000;
     margin-top: 20px;
   }
+  //searchbaro dropdownas
+
+  .search-dropdown {
+    list-style: none;
+    background: white;
+    border: 1px solid #ccc;
+    max-width: 400px; // Uždeda limitą, kad dropdown nebūtų per siauras
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    top: 100%; // Pastato dropdown iškart po paieškos laukeliu
+    left: 50%;
+    transform: translateX(-50%); // Centruoja jį tiksliai pagal paieškos laukelį
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
   
+  .search-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%; // Užtikrina, kad dropdown elementai neužimtų per mažai vietos
+  }
+  
+  .search-dropdown li:hover {
+    background: #f0f0f0;
+  }
+
   // Receptu saraso stiliai
 .home-page {
     text-align: center;
