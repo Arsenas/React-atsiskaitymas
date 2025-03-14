@@ -1,31 +1,43 @@
-import React, { useEffect } from "react";
+import { useState } from "react";
 import { useRecipeContext } from "../context/RecipeContext";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
-  const { state, dispatch } = useRecipeContext();
+  const { state } = useRecipeContext();
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log("Recipes from context:", state.recipes);
-  }, [state.recipes]);
+  const filteredRecipes = state.recipes.filter((recipe) =>
+    recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const handleSelectRecipe = (id: string) => {
+    navigate(`/recipe/${id}`);
+  };
 
   return (
-    <div>
-      <h1>Welcome to Recipe Finder</h1>
-      <p>Search for your favorite recipes!</p>
-
-      <h2>Available Recipes</h2>
-      <ul>
-        {state.recipes.length > 0 ? (
-          state.recipes.map((recipe) => (
-            <li key={recipe.id}>
-              <h3>{recipe.title}</h3>
-              <img src={recipe.image} alt={recipe.title} width="150" />
-            </li>
-          ))
-        ) : (
-          <p>Loading recipes...</p>
-        )}
-      </ul>
+    <div className="home-page">
+      <h2>Ieškoti recepto:</h2>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Įveskite recepto pavadinimą..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-bar"
+        />
+        <ul className={`search-dropdown ${searchTerm ? "show" : ""}`}>
+          {filteredRecipes.length > 0 ? (
+            filteredRecipes.map((recipe) => (
+              <li key={recipe.id} onClick={() => handleSelectRecipe(recipe.id)}>
+                {recipe.title}
+              </li>
+            ))
+          ) : (
+            searchTerm && <li>Nėra rezultatų</li>
+          )}
+        </ul>
+      </div>
     </div>
   );
 };

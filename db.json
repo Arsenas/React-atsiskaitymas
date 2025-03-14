@@ -1,21 +1,201 @@
 {
   "recipes": [
     {
-      "id": 1,
-      "title": "Spaghetti",
-      "image": "https://picsum.photos/150"
+      "id": "1741975736654",
+      "title": "Skanus didysis sumustinis",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
     },
     {
-      "id": 2,
-      "title": "Tacos",
-      "image": "https://picsum.photos/150"
+      "id": "1741976726004",
+      "title": "Klasikiniai varškėčiai",
+      "description": "Lengvi ir purūs varškėčiai, kurie yra itin populiarūs tiek pusryčiams, tiek kaip desertas. Varškėčiams būdingas švelnus varškės skonis ir minkšta tekstūra, kurią galima papildyti vanile ar citrinos žievele, suteikiant gaivumo. Jie kepami iki auksinės spalvos ir patiekiami su grietine, medumi, uogiene ar šviežiomis uogomis. Tai paprastas, tačiau skanus ir sotus patiekalas, puikiai tinkantis įvairioms progoms bei džiuginantis tradiciniu naminiu skoniu.",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/thumb920x573/15049.jpg"
     },
     {
-      "id": "02a1",
-      "title": "Spatheti",
-      "image": "https://veganwithgusto.com/wp-content/uploads/2021/05/spicy-spaghetti-arrabbiata.jpg"
+      "id": "1741979066296",
+      "title": "Burgeris",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+    },
+    {
+      "id": "1741979078120",
+      "title": "Mesyte",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+    },
+    {
+      "id": "1741980047856",
+      "title": "Vafliai",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+    },
+    {
+      "id": "1741980076080",
+      "title": "Beikonas",
+      "description": "mm",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
     }
   ],
-  "favorites": [],
-  "reviews": []
+  "reviews": [
+    {
+      "id": "101",
+      "recipeId": null,
+      "author": "Jonas",
+      "text": "Labai skanus receptas! Rekomenduoju.",
+      "rating": 5
+    },
+    {
+      "id": "1741975159879",
+      "recipeId": null,
+      "author": "Arsenij",
+      "text": "Geras"
+    },
+    {
+      "id": "1741975307407",
+      "recipeId": null,
+      "author": "Arsenijus",
+      "text": "Labai patiko ir butinai dar karta gaminsiu!"
+    },
+    {
+      "id": "1741975559918",
+      "recipeId": null,
+      "author": "Deividas",
+      "text": "Ziauriai geraS!",
+      "rating": 5
+    },
+    {
+      "id": "1741975591310",
+      "recipeId": null,
+      "author": "Arsenij",
+      "text": "Geras",
+      "rating": 1
+    },
+    {
+      "id": "1741975784622",
+      "recipeId": "1741975736654",
+      "author": "Dominykas",
+      "text": "Ziauriai gerai prie cs'o sueina",
+      "rating": 5
+    },
+    {
+      "id": "1741975970422",
+      "recipeId": "1741975736654",
+      "author": "Domas",
+      "text": "Neblogas",
+      "rating": 4
+    },
+    {
+      "id": "1741976603989",
+      "recipeId": "1741975736654",
+      "author": "Deividas",
+      "text": "Very good very nice",
+      "rating": 5
+    },
+    {
+      "id": "1741976748524",
+      "recipeId": "1741976726004",
+      "author": "Arsenijus",
+      "text": "Nu zinokit nerealiai, labai Lengvi ir purūs varškėčiai, kurie yra itin populiarūs tiek pusryčiams, tiek kaip desertas. Varškėčiams būdingas švelnus varškės skonis ir minkšta tekstūra, kurią galima papildyti vanile ar citrinos žievele, suteikiant gaivumo. Jie kepami iki auksinės spalvos ir patiekiami su grietine, medumi, uogiene ar šviežiomis uogomis. Tai paprastas, tačiau skanus ir sotus patiekalas, puikiai tinkantis įvairioms progoms bei džiuginantis tradiciniu naminiu skoniu.",
+      "rating": 5
+    },
+    {
+      "id": "1741977395731",
+      "recipeId": "1741976726004",
+      "author": "Deimantas",
+      "text": "Labai skanu labai gerai labai faina",
+      "rating": 4
+    },
+    {
+      "id": "1741978288402",
+      "recipeId": "1741976726004",
+      "author": "Arsenij",
+      "text": "Grazu",
+      "rating": 5
+    },
+    {
+      "id": "1741978562866",
+      "recipeId": "1741976726004",
+      "author": "asasf",
+      "text": "asdas",
+      "rating": 5
+    },
+    {
+      "id": "1741978627953",
+      "recipeId": "1741975736654",
+      "author": "asdas",
+      "text": "asda",
+      "rating": 5
+    },
+    {
+      "id": "1741978656625",
+      "recipeId": "1741975736654",
+      "author": "aasd",
+      "text": "asdads",
+      "rating": 4
+    },
+    {
+      "id": "1741978781297",
+      "recipeId": "1741975736654",
+      "author": "asd",
+      "text": "asd",
+      "rating": 2
+    },
+    {
+      "id": "1741978790561",
+      "recipeId": "1741975736654",
+      "author": "asd",
+      "text": "asd",
+      "rating": 4
+    },
+    {
+      "id": "1741978813809",
+      "recipeId": "1741975736654",
+      "author": "asd",
+      "text": "asd",
+      "rating": 3
+    },
+    {
+      "id": "1741978892257",
+      "recipeId": "1741975736654",
+      "author": "qwe",
+      "text": "qwe",
+      "rating": 4
+    },
+    {
+      "id": "1741978954185",
+      "recipeId": "1741976726004",
+      "author": "fjfgh",
+      "text": "fghfgh",
+      "rating": 5
+    },
+    {
+      "id": "1741978966889",
+      "recipeId": "1741975736654",
+      "author": "eret",
+      "text": "ertert",
+      "rating": 4
+    },
+    {
+      "id": "1741978986961",
+      "recipeId": "1741975736654",
+      "author": "qweqe",
+      "text": "qweq",
+      "rating": 5
+    },
+    {
+      "id": "1741979002225",
+      "recipeId": "1741975736654",
+      "author": "qeq",
+      "text": "wqweqw",
+      "rating": 4
+    },
+    {
+      "id": "1741980009961",
+      "recipeId": "1741975736654",
+      "author": "flojdas",
+      "text": "Bigup",
+      "rating": 5
+    }
+  ]
 }
