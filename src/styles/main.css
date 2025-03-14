@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -101,14 +102,30 @@ body {
 
 .recipe-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
   max-width: 1000px;
   margin: 0 auto;
-  gap: 15px;
   justify-content: center;
-  margin: 20px auto;
+  margin-top: 20px;
 }
 
+/* MEDIA QUERY: Mažesniems ekranams */
+@media (max-width: 1024px) {
+  .recipe-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .recipe-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .recipe-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .recipe-card {
   background-color: white;
   padding: 15px;
@@ -245,6 +262,31 @@ body {
   background-color: #218838;
 }
 
+.favorites-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* MEDIA QUERY: Mažesniems ekranams */
+@media (max-width: 1024px) {
+  .favorites-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .favorites-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .favorites-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .button-group {
   display: flex;
   gap: 15px;

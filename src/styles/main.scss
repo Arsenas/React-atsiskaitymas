@@ -111,12 +111,31 @@ body {
   
   .recipe-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); // 4 receptai vienoje eilutėje
-    max-width: 1000px; // Padidintas plotis, kad tilptų 4 receptai
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Automatinis prisitaikymas
+    gap: 50px;
+    max-width: 1000px; // Užtikriname, kad 4 receptai tilptų normaliame ekrane
     margin: 0 auto;
-    gap: 15px;
     justify-content: center;
-    margin: 20px auto;
+    margin-top: 20px;
+  }
+  
+  /* MEDIA QUERY: Mažesniems ekranams */
+  @media (max-width: 1024px) {
+    .recipe-list {
+      grid-template-columns: repeat(3, 1fr); // 3 receptai per eilutę vidutinio dydžio ekrane
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .recipe-list {
+      grid-template-columns: repeat(2, 1fr); // 2 receptai per eilutę mažesniame ekrane
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .recipe-list {
+      grid-template-columns: repeat(1, 1fr); // 1 receptas per eilutę telefone
+    }
   }
   
   .recipe-card {
@@ -257,6 +276,34 @@ body {
   
   .save-btn:hover {
     background-color: #218838;
+  }
+
+  .favorites-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Automatinis prisitaikymas
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  
+  /* MEDIA QUERY: Mažesniems ekranams */
+  @media (max-width: 1024px) {
+    .favorites-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .favorites-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .favorites-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   // Recepto puslapiu mygtukai
