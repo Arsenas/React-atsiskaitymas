@@ -1,8 +1,21 @@
 {
-    "recipes": [
-      { "id": 1, "title": "Spaghetti", "image": "https://via.placeholder.com/150" },
-      { "id": 2, "title": "Tacos", "image": "https://via.placeholder.com/150" }
-    ],
-    "favorites": [],
-    "reviews": []
-  }
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Spaghetti",
+      "image": "https://picsum.photos/150"
+    },
+    {
+      "id": 2,
+      "title": "Tacos",
+      "image": "https://picsum.photos/150"
+    },
+    {
+      "id": "02a1",
+      "title": "Spatheti",
+      "image": "https://veganwithgusto.com/wp-content/uploads/2021/05/spicy-spaghetti-arrabbiata.jpg"
+    }
+  ],
+  "favorites": [],
+  "reviews": []
+}
