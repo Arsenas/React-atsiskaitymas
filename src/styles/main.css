@@ -207,7 +207,7 @@ body {
   }
 }
 .recipe-card {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -251,7 +251,7 @@ body {
 .recipe-page {
   max-width: 800px;
   margin: 40px auto;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -419,7 +419,7 @@ body {
 .reviews-page {
   max-width: 600px;
   margin: 40px auto;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -565,7 +565,7 @@ body {
 .add-recipe-page {
   max-width: 600px;
   margin: 40px auto 40px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
