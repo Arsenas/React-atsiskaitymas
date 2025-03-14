@@ -12,6 +12,8 @@ const RecipePage = () => {
     return <p className="error-text">Receptas nerastas...</p>;
   }
 
+  const recipeReviews = state.reviews.filter((review) => review.recipeId === id); // Tik su šiuo receptu susiję atsiliepimai
+
   const handleAddToFavorites = () => {
     if (!recipe || state.favorites.some((fav) => fav.id === recipe.id)) return; // Avoid duplicate favorites
     dispatch({ type: "ADD_TO_FAVORITES", payload: recipe });
@@ -45,6 +47,25 @@ const RecipePage = () => {
         />
         <div className="recipe-details">
           <p className="recipe-description">{recipe.description || "Aprašymas nepateiktas."}</p>
+          {/* Atsiliepimų sekcija */}
+      <div className="recipe-reviews">
+  <h3 className="reviews-title">Atsiliepimai:</h3>
+  {recipeReviews.length > 0 ? (
+    recipeReviews.map((review) => (
+      <div key={review.id} className="review-card">
+        <div className="review-header">
+          <strong className="review-author">{review.author}</strong> 
+          <div className="review-rating">
+            {"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}
+          </div>
+        </div>
+        <p className="review-text">{review.text}</p>
+      </div>
+    ))
+  ) : (
+    <p className="no-reviews">Kol kas nėra atsiliepimų.</p>
+  )}
+</div>
           <div className="button-group">
             <button className="favorite-btn" onClick={handleAddToFavorites}>Pridėti prie mėgstamiausių</button>
             <Link to={`/edit-recipe/${recipe.id}`} className="edit-btn">Redaguoti receptą</Link>
@@ -52,6 +73,7 @@ const RecipePage = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };

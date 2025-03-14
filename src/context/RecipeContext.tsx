@@ -4,11 +4,13 @@ import type { Recipe } from "../types/Recipe";
 
 
 // Atsiliepimo duomenų tipas
-interface Review {
+type Review = {
   id: string;
-  text: string;
+  recipeId: string; 
   author: string;
-}
+  text: string;
+  rating: number;
+};
 
 // Konteksto būsenos tipas
 interface RecipeState {
