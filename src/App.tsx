@@ -10,18 +10,16 @@ import "./styles/main.scss"; // Importuojam stilius
 
 const App = () => {
   return (
-    <div className="app-container"> {/* Pagrindinis puslapio konteineris */}
+    <div className="page-content">
       <Navbar />
-      <div className="content"> {/* Vieta, kur atvaizduojami puslapiai */}
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/recipe/:id" element={<RecipePage />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
-          <Route path="/reviews" element={<ReviewsPage />} />
-          <Route path="/add-recipe" element={<AddRecipePage />} />
-          <Route path="/edit-recipe/:id" element={<EditRecipePage />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/recipe/:id" element={<RecipePage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
+        <Route path="/add-recipe" element={<AddRecipePage />} />
+        <Route path="/edit-recipe/:id" element={<EditRecipePage />} />
+      </Routes>
     </div>
   );
 };

@@ -17,14 +17,20 @@
       "title": "aas",
       "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
       "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+    },
+    {
+      "id": "1741957054612",
+      "title": "aasd",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+    },
+    {
+      "id": "1741957062075",
+      "title": "asdasd",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
     }
   ],
   "favorites": [],
-  "reviews": [
-    {
-      "id": "1741955364598",
-      "text": "Nice",
-      "author": "Senia"
-    }
-  ]
+  "reviews": []
 }

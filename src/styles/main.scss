@@ -38,10 +38,20 @@ body {
   }
 
   // Navigacija
-.navbar {
+  .navbar {
+    width: 100%;
     background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
     padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
   }
+  
+  
   
   .nav-container {
     display: flex;
@@ -79,6 +89,20 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
   }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  .navbar a:hover {
+    background-color: #555;
+  }
+  
+  .page-content {
+    margin-top: 100px; // Visas puslapio turinys pasislenka žemyn, kad nebūtų po navbaru
+  }
   
   // Receptu saraso stiliai
 .home-page {
@@ -86,11 +110,13 @@ body {
   }
   
   .recipe-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 receptai vienoje eilutėje
+    max-width: 1000px; // Padidintas plotis, kad tilptų 4 receptai
+    margin: 0 auto;
+    gap: 15px;
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    margin: 20px auto;
   }
   
   .recipe-card {
@@ -180,19 +206,7 @@ body {
     margin-bottom: 20px;
   }
   
-  .favorite-btn {
-    background-color: #ff4d4d;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .favorite-btn:hover {
-    background-color: #cc0000;
-  }
+
 
   // Receptu redagavimo page
 .edit-recipe-page {
@@ -253,7 +267,7 @@ body {
   }
   
   .favorite-btn {
-    background-color: #ff4d4d;
+    background-color: #28a745;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -263,7 +277,7 @@ body {
   }
   
   .favorite-btn:hover {
-    background-color: #cc0000;
+    background-color: #218838;
   }
   
   .edit-btn {
@@ -398,3 +412,32 @@ body {
     background-color: #c82333;
   }
   
+  //prideti recepta stilius 
+
+  .add-recipe-page {
+    max-width: 600px;
+    margin: 40px auto 40px; // Pridėtas margin-top, kad nebūtų po navbaru
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-recipe-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .add-recipe-btn:hover {
+    background-color: #218838;
+  }
