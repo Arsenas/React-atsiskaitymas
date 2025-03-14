@@ -25,3 +25,6 @@ const App = () => {
 };
 
 export default App;
+
+
+//pridedu komentara, nes projekto pradzioje netycia istryniau secondary brancha, sukuriau dabar i projekto pabaiga kita brancha ir naudoju sita komentara kad butu kazkokie pakitimai tarp main ir secondary
