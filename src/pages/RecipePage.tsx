@@ -1,10 +1,27 @@
 import { useRecipeContext } from "../context/RecipeContext";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const RecipePage = () => {
   const { id } = useParams();
-  const { state } = useRecipeContext();
+  const { state, dispatch } = useRecipeContext();
+  const navigate = useNavigate();
   const recipe = state.recipes.find((r) => r.id === id);
+
+  const handleDeleteRecipe = async () => {
+    if (!recipe) return;
+  
+    const confirmDelete = window.confirm("Ar tikrai norite pasalinti si recepta?");
+    if (!confirmDelete) return;
+  
+    try {
+      await axios.delete(`http://localhost:5000/recipes/${recipe.id}`);
+      dispatch({ type: "DELETE_RECIPE", payload: recipe.id });
+      navigate("/");
+    } catch (error) {
+      console.error("Klaida salinant recepta:", error);
+    }
+  };
 
   if (!recipe) {
     return <p className="error-text">Receptas nerastas...</p>;
@@ -27,7 +44,8 @@ const RecipePage = () => {
           </p>
           <div className="button-group">
             <button className="favorite-btn">Pridėti į mėgstamiausius</button>
-            <Link to={`/edit-recipe/${recipe.id}`} className="edit-btn">✏️ Redaguoti receptą</Link>
+            <Link to={`/edit-recipe/${recipe.id}`} className="edit-btn">Redaguoti receptą</Link>
+            <button className="delete-btn" onClick={handleDeleteRecipe}>Pašalinti receptą</button>
           </div>
         </div>
       </div>

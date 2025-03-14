@@ -56,6 +56,11 @@ const recipeReducer = (state: RecipeState, action: RecipeAction): RecipeState =>
             : recipe
         ),
       };
+    case "DELETE_RECIPE":
+      return {
+        ...state,
+        recipes: state.recipes.filter((recipe) => recipe.id !== action.payload),
+      };
     default:
       return state;
   }

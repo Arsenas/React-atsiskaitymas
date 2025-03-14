@@ -230,7 +230,7 @@
     background-color: #218838;
   }
 
-  // RECEPTO PUSLAPIO MYGTUKAI
+  // Recepto puslapiu mygtukai
 .button-group {
     display: flex;
     gap: 15px;
@@ -265,7 +265,7 @@
     background-color: #0056b3;
   }
   
-  // ATSILIEPIMŲ PUSLAPIS
+  // Atsiliepimu puslapis
 .reviews-page {
     max-width: 600px;
     margin: 40px auto;
@@ -324,5 +324,21 @@
   
   .add-review-btn:hover {
     background-color: #218838;
+  }
+  
+  // Mygtukas pasalinti recepta
+
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
   }
   
