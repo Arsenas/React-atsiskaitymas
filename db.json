@@ -35,6 +35,12 @@
       "title": "Beikonas",
       "description": "mm",
       "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+    },
+    {
+      "id": "1741982922491",
+      "title": "gkkgjkg",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
     }
   ],
   "reviews": [
@@ -195,6 +201,41 @@
       "recipeId": "1741975736654",
       "author": "flojdas",
       "text": "Bigup",
+      "rating": 5
+    },
+    {
+      "id": "1741982735555",
+      "recipeId": "1741975736654",
+      "author": "Arsenij",
+      "text": "asldjalskdjasdasd",
+      "rating": 5
+    },
+    {
+      "id": "1741982889467",
+      "recipeId": "1741976726004",
+      "author": "Senia",
+      "text": "labai patiko ir skanus",
+      "rating": 5
+    },
+    {
+      "id": "1741982957410",
+      "recipeId": "1741975736654",
+      "author": "senia",
+      "text": "belekaip skanu",
+      "rating": 5
+    },
+    {
+      "id": "1741983265434",
+      "recipeId": "1741979066296",
+      "author": "Senia",
+      "text": "ziauriai gerai",
+      "rating": 5
+    },
+    {
+      "id": "1741984372256",
+      "recipeId": "1741979066296",
+      "author": "aar",
+      "text": "asras",
       "rating": 5
     }
   ]

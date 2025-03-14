@@ -1,4 +1,6 @@
+
 // Nuresetiname visus standartinius nustatymus
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,9 @@
     font-family: Arial, sans-serif;
   }
   
+
  // BENDRAS PUSLAPIŲ FONAS
+
 body {
     background-image: url("https://cdn.create.vista.com/api/media/medium/362010546/stock-photo-pepper-garlic-ginger-bay-leaf-spices-lime-wooden-spoon-salt?token=");
     background-size: cover;
@@ -17,7 +21,9 @@ body {
     font-family: Arial, sans-serif;
   }
   
+
   // Užtikriname, kad visa aplikacija paveldi fono stilių
+
   #root {
     min-height: 100vh;
     display: flex;
@@ -25,19 +31,25 @@ body {
   }
   
   
+
   // Aplikacijos pagrindinis konteineris
+
   .app-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
   }
   
+
   // Vieta, kur atvaizduojami puslapiai
+
   .content {
     margin-top: 20px;
   }
 
+
   // Navigacija
+
   .navbar {
     width: 100%;
     background-color:white;
@@ -99,7 +111,9 @@ body {
     margin-top: 100px; // Visas puslapio turinys pasislenka žemyn, kad nebūtų po navbaru
   }
 
+
   //search baras
+
 
   .search-container {
     display: flex;
@@ -130,7 +144,9 @@ body {
     color: #ff0000;
     margin-top: 20px;
   }
+
   //searchbaro dropdownas
+
 
   .search-dropdown {
     list-style: none;
@@ -168,7 +184,9 @@ body {
   .search-dropdown li:hover {
     background: #f0f0f0;
   }
+
   // Receptu saraso stiliai
+
 .home-page {
     text-align: center;
     margin-top: 250px;
@@ -263,7 +281,9 @@ body {
     background-color: #0056b3;
   }
 
+
   // Receptu detaliu puslapis
+
 .recipe-page {
     max-width: 800px;
     margin: 40px auto;
@@ -311,7 +331,9 @@ body {
   
 
 
+
   // Receptu redagavimo page
+
   .edit-recipe-page {
     max-width: 500px;
     margin: 50px auto;
@@ -392,7 +414,9 @@ body {
     }
   }
 
+
   // Recepto puslapiu mygtukai
+
 .button-group {
     display: flex;
     gap: 15px;
@@ -426,7 +450,7 @@ body {
   .edit-btn:hover {
     background-color: #0056b3;
   }
-
+  
   .review-text {
     font-size: 14px;
     color: #333;
@@ -436,9 +460,7 @@ body {
     font-size: 18px;
     color: gold; // Geltonos žvaigždutės
     margin-bottom: 5px;
-  }
-  
-  // Atsiliepimu puslapis
+  }    // Atsiliepimu puslapis
 .reviews-page {
     max-width: 600px;
     margin: 40px auto;
@@ -517,7 +539,9 @@ body {
   overflow: hidden;
   min-height: 40px;
 }
+
 // Automatinis dydžio keitimas priklausomai nuo teksto kiekio
+
 .review-input:focus,
 .description-input:focus {
   min-height: 60px;
@@ -556,7 +580,9 @@ body {
     }
   }
 
+
   //rating zvaigzdutes
+
 
   .rating-container {
     display: flex;
@@ -583,7 +609,9 @@ body {
 
 
   
+
   // Mygtukas pasalinti recepta
+
 
   .delete-btn {
     background-color: #dc3545;
@@ -599,7 +627,9 @@ body {
     background-color: #c82333;
   }
   
+
   //prideti recepta stilius 
+
 
   .add-recipe-page {
     max-width: 600px;
@@ -672,9 +702,7 @@ body {
     font-weight: 400;
     font-style: normal;
 
-  }
-
-  .success-message {
+  }  .success-message {
     background-color: #4CAF50; // Žalia spalva
     color: white;
     padding: 10px 15px;
