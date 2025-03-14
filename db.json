@@ -12,5 +12,11 @@
     }
   ],
   "favorites": [],
-  "reviews": []
+  "reviews": [
+    {
+      "id": "1741953108530",
+      "text": "Gaidys",
+      "author": "Senia"
+    }
+  ]
 }
