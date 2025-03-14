@@ -175,6 +175,11 @@ body {
   color: #333;
 }
 
+.reviews-title {
+  text-align: left;
+  margin: 10px 0;
+}
+
 .recipe-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -400,6 +405,17 @@ body {
   background-color: #0056b3;
 }
 
+.review-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.review-rating {
+  font-size: 18px;
+  color: gold;
+  margin-bottom: 5px;
+}
+
 .reviews-page {
   max-width: 600px;
   margin: 40px auto;
@@ -416,21 +432,14 @@ body {
 
 .review-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   background-color: #f9f9f9;
-  padding: 10px 15px;
+  padding: 20px 15px;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   position: relative;
   gap: 10px;
-}
-
-.review-content {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .review-author {
@@ -441,6 +450,7 @@ body {
 .review-text {
   flex: 1;
   color: #555;
+  font-size: 16px;
 }
 
 .delete-review-btn {
@@ -472,6 +482,7 @@ body {
 .review-input,
 .description-input {
   padding: 10px;
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
@@ -499,6 +510,42 @@ body {
 
 .add-review-btn:hover {
   background-color: #218838;
+}
+
+.review-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.review-select:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.star:hover {
+  transform: scale(1.2);
+}
+.star.selected {
+  color: gold;
 }
 
 .delete-btn {
@@ -579,6 +626,35 @@ body {
   background-color: #218838;
 }
 
-h1, h2, h3, .logo {
+.logo, .home-page h2 {
   font-family: "Bad Script", cursive;
+}
+
+h1, h2, h3 {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.success-message {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-weight: bold;
+  animation: fadeOut 3s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
