@@ -8,7 +8,7 @@
   
  // BENDRAS PUSLAPIŲ FONAS
 body {
-    background-image: url("https://img.freepik.com/free-photo/copy-space-italian-food-ingredients_23-2148551732.jpg?t=st=1741956334~exp=1741959934~hmac=f7c0541df183ff4ec9d7bfd8e7f4ee3ba5e32c6af27c100b31f4a780e610c43f&w=1380");
+    background-image: url("https://cdn.create.vista.com/api/media/medium/362010546/stock-photo-pepper-garlic-ginger-bay-leaf-spices-lime-wooden-spoon-salt?token=");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -65,7 +65,7 @@ body {
   
   .logo {
     color: #333;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
   }
   
@@ -179,7 +179,21 @@ body {
     text-align: center;
     margin-top: 250px;
   }
-  
+.home-page h2 {
+    color: white;
+    font-size: 50px;
+}
+.page-title {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+.reviews-page .page-title, .add-recipe-page .page-title {
+    color:#333;
+
+}
+
+
   .recipe-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Automatinis prisitaikymas
@@ -572,12 +586,18 @@ body {
   border-radius: 4px;
   font-size: 1rem;
 }
-.add-recipe-form textarea {
-    resize: none; // Neleidžia ištempti į šonus
-    min-height: 100px;
-    width: 500px;
-  }
-
+.add-recipe-form textarea,
+.edit-recipe-form textarea {
+  width: 550px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-height: 100px; // Fiksuotas pradinis aukštis
+  overflow: hidden; // Paslepia nereikalingą scrollbarą
+  resize: none; // Neleidžia tempimo rankiniu būdu
+  transition: height 0.2s ease-in-out; // Sklandi animacija
+}
   .add-recipe-btn {
     background-color: #28a745;
     color: white;

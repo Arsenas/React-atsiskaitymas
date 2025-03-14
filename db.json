@@ -1,42 +1,47 @@
 {
   "recipes": [
     {
-      "id": "1741959143360",
-      "title": "Picl",
-      "description": "mmm",
-      "image": "https://content.imageresizer.com/images/memes/Pickle-meme-6.jpg"
+      "id": "1741966459365",
+      "title": "Bulvių sriuba su pienu",
+      "description": "Paprasčiausia bulvių  sriuba su pienu ir įprasčiausiais ingredientais paruošiama greitai, o rezultatas pranoksta visus lūkesčius. Sriuba gali būti patiekiama atvėsusi karštą vasaros dieną arba karšta žiemą. Šis receptas paruošiamas labai greitai. Sriuba ruošiama be  mėsos. Todėl visas laikas skiriamas daržovių ruošimui ir virimui. Šiai bulvių sriubai su pienu būtinai paruoškite skrebučius (geriausia iš juodos duonos). Patiekite juos su žolelėmis ir česnaku. Yra ir kitas patiekimo variantas, kai skrebučiai įtrinami česnaku ir dedami ant lėkštės dugno. Ir ant viršaus pilama sriuba. Paprasta ir skanu!",
+      "image": "https://gaminimas.lt/images/receptai/8-bulviu-sriuba-su-pienu.jpeg.webp"
     },
     {
-      "id": "1741959204089",
-      "title": "spaget",
-      "description": "so yummi",
-      "image": "https://www.shitpostbot.com/img/sourceimages/spaget-tatum-59322e1a85154.jpeg"
+      "id": "1741966554156",
+      "title": "Tradicinis kugelis",
+      "description": "Ar norite sužinoti, kaip tradicinį, lietuvišką kugelį? Žiūrėkite žingsnis po žingsnio receptą. Kugelis yra labai sotus patiekalas šeimos vakarienei, kurį įvertins visi bulvių mėgėjai. Kad patiekalas būtų minkštesnis, įpilama pieno. Bet jūs taip pat galite lengvai išsiversti be jo, įsitikinkite patys. Kugelis turi būti patiekiamas karštas ir visada su grietine.",
+      "image": "https://gaminimas.lt/images/receptai/5-tradicinis-kugelis.jpeg.webp"
     },
     {
-      "id": "1741959282760",
-      "title": "Protein",
-      "description": "Thank you for my muscles mr cow",
-      "image": "https://cdn.britannica.com/53/157153-050-E5582B5A/Holstein-cow.jpg"
+      "id": "1741966581508",
+      "title": "Čeburekai su gazuotu vandeniu",
+      "description": "Tai lengviausias čeburekų receptas, kurį kada nors matėte. Kaip pasigaminti geriausius čeburekus? Žiūrėkite ir atsiminkite, o dar geriau – įtraukite į savo mėgstamiausius, nes tuo remsitės dar ne kartą! Tai paprasčiausias čeburekų receptas.  Tešla nesiskleidžia ir išlaiko viduje esantį faršą sultingą. O išorė įgauna patrauklią spalvą ir traškią plutą. Kas kartą pabandys pasigaminti tokius čeburekus, be jokios abejonės, gamins juos dar kartą, nes  tešla pagaminama labai greitai ir su ja lengva dirbti. Palepinkite save ir savo namiškius sultingais ir skaniais čeburekais.",
+      "image": "https://gaminimas.lt/images/receptai/6-ceburekai-su-gazuotu-vandeniu.jpeg.webp"
     },
     {
-      "id": "1741963231346",
-      "title": "aogiaoihioas",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+      "id": "1741966606149",
+      "title": "Sumuštiniai su kiaušiniu ir dešra",
+      "description": "Šie sumuštiniai yra tokie sotūs, skanūs ir maistingi. Be kiaušinių ir  dešros, juose yra  sūrio ir pomidorų bei šiek tiek majonezo. Neseniai radau šį įdomų sumuštinių receptą, jis man labai patiko ne tik dėl patrauklios ir įdomios išvaizdos, bet ir dėl puikaus skonio. Labai mėgstu kiaušinienę ir, žinoma, sumuštinius, o čia viskas iš karto – tikri mano svajonių pusryčiai. Dabar šiuos sumuštinius su kiaušiniu ir dešra gaminu namuose gana dažnai, visa mano šeima juos labai mėgsta, net vaikai valgo su dideliu malonumu.",
+      "image": "https://gaminimas.lt/images/receptai/5-sumustiniai-su-kiausiniu-ir-desra.jpeg.webp"
     },
     {
-      "id": "1741965405823",
-      "title": "mmm",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+      "id": "1741966677156",
+      "title": "Sausainių tortas",
+      "description": "Skanus greitai pagaminamas  tortas. Jums tiesiog reikia pasigaminti kremą, nes  torto pagrindas bus pagamintas iš sausainių. Ir kuo ilgiau tortas pasistovi, tuo jis tampa skanesnis. Vietoj glazūros, torto viršų galite padengti ištirpintu šokoladu arba pabarstyti sausainių trupiniais. Tortą puikiai papildo šviežios arba šaldytos uogos ir mėtos.",
+      "image": "https://gaminimas.lt/images/receptai/12-sausainiu-tortas.jpeg.webp"
     }
   ],
   "favorites": [],
   "reviews": [
     {
-      "id": "1741959340600",
-      "text": "very mid page, get good",
-      "author": "Senia"
+      "id": "1741966625573",
+      "text": "Skanūs receptai",
+      "author": "Arsenijus"
+    },
+    {
+      "id": "1741966638308",
+      "text": "Arsenijus meluoja",
+      "author": "Jurgis"
     }
   ]
 }

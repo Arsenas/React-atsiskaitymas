@@ -18,7 +18,8 @@ const EditRecipePage = () => {
     e.preventDefault();
     if (!title.trim() || !description.trim()) return alert("Pavadinimas ir aprašymas negali būti tušti!");
 
-    const updatedRecipe = { id, title, description, image };
+    const updatedRecipe = { id: id || "", title, description, image };
+
 
     try {
       await axios.put(`http://localhost:5000/recipes/${id}`, updatedRecipe);
