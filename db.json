@@ -1,0 +1,8 @@
+{
+    "recipes": [
+      { "id": 1, "title": "Spaghetti", "image": "https://via.placeholder.com/150" },
+      { "id": 2, "title": "Tacos", "image": "https://via.placeholder.com/150" }
+    ],
+    "favorites": [],
+    "reviews": []
+  }
