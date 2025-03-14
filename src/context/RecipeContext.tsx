@@ -1,5 +1,6 @@
 import { createContext, useReducer, useContext, useEffect, ReactNode } from "react";
 import axios from "axios";
+import { Recipe } from "../types/Recipe";
 
 // Recepto duomenų tipas
 interface Recipe {
@@ -38,10 +39,9 @@ type RecipeAction =
 const RecipeContext = createContext<{ state: RecipeState; dispatch: React.Dispatch<RecipeAction> } | null>(null);
 
 // Pradinė būsena
-const initialState: RecipeState = {
+const initialState: { recipes: Recipe[]; favorites: Recipe[]; } = {
   recipes: [],
   favorites: [],
-  reviews: [], 
 };
 
 // Reducer funkcija
@@ -70,6 +70,13 @@ const recipeReducer = (state: RecipeState, action: RecipeAction): RecipeState =>
     ...state,
     reviews: state.reviews.filter((review) => review.id !== action.payload),
   };
+  case "EDIT_RECIPE":
+    return {
+      ...state,
+      recipes: state.recipes.map((recipe) =>
+        recipe.id === action.payload.id ? { ...recipe, ...action.payload } : recipe
+      ),
+    };
     default:
       return state;
   }
