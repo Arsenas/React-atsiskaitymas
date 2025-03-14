@@ -1,12 +1,12 @@
 {
   "recipes": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Spaghetti",
       "image": "https://picsum.photos/150"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Tacos",
       "image": "https://picsum.photos/150"
     },
@@ -14,6 +14,16 @@
       "id": "02a1",
       "title": "Spatheti",
       "image": "https://veganwithgusto.com/wp-content/uploads/2021/05/spicy-spaghetti-arrabbiata.jpg"
+    },
+    {
+      "id": "f1f8",
+      "title": "picl",
+      "image": "https://lindamziedrich.files.wordpress.com/2012/11/pickle-cocktail.jpg?w=223"
+    },
+    {
+      "id": "9394",
+      "title": "feet",
+      "image": "https://live.staticflickr.com/157/359009361_bea1dbfc61_b.jpg"
     }
   ],
   "favorites": [],

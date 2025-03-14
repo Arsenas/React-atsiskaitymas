@@ -12,9 +12,22 @@ const RecipePage = () => {
 
   return (
     <div className="recipe-page">
-      <h2 className="recipe-title">{recipe.title}</h2>
-      <img src={recipe.image || "https://via.placeholder.com/300"} alt={recipe.title} className="recipe-image" />
-      <p className="recipe-description">Aprašymas: Lorem ipsum dolor sit amet...</p>
+      <div className="recipe-header">
+        <h2 className="recipe-title">{recipe.title}</h2>
+      </div>
+      <div className="recipe-content">
+        <img 
+          src={recipe.image || "https://via.placeholder.com/400"} 
+          alt={recipe.title} 
+          className="recipe-image" 
+        />
+        <div className="recipe-details">
+          <p className="recipe-description">
+            Aprašymas: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <button className="favorite-btn">Pridėti į mėgstamiausius</button>
+        </div>
+      </div>
     </div>
   );
 };

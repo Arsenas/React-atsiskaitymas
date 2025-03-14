@@ -120,3 +120,61 @@
   .view-recipe-btn:hover {
     background-color: #0056b3;
   }
+
+  // RECEPTU DETALIU PUSLAPIS
+.recipe-page {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .recipe-header {
+    margin-bottom: 20px;
+  }
+  
+  .recipe-title {
+    font-size: 26px;
+    color: #333;
+  }
+  
+  .recipe-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .recipe-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .recipe-details {
+    text-align: left;
+    max-width: 600px;
+  }
+  
+  .recipe-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .favorite-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .favorite-btn:hover {
+    background-color: #cc0000;
+  }
