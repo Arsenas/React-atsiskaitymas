@@ -25,3 +25,10 @@ const App = () => {
 };
 
 export default App;
+
+//komentaras testinimui, veliau istrinsiu
+//komentaras testinimui, veliau istrinsiu
+//komentaras testinimui, veliau istrinsiu
+//komentaras testinimui, veliau istrinsiu
+//komentaras testinimui, veliau istrinsiu
+//komentaras testinimui, veliau istrinsiu
