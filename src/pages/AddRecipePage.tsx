@@ -1,47 +1,62 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useRecipeContext } from "../context/RecipeContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const AddRecipePage = () => {
-  const [title, setTitle] = useState("");
-  const [image, setImage] = useState("");
-  const { dispatch } = useRecipeContext();
+  const { state, dispatch } = useRecipeContext();
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!title || !image) {
-      alert("Please enter both title and image URL");
-      return;
-    }
+  const [title, setTitle] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+
+  const handleAddRecipe = async () => {
+    if (!title.trim()) return;
+
+    const newRecipe = {
+      id: Date.now().toString(), // Unikalus ID
+      title,
+      image: imageUrl || "https://via.placeholder.com/400",
+    };
 
     try {
-      const newRecipe = { title, image };
       const response = await axios.post("http://localhost:5000/recipes", newRecipe);
-      
-      dispatch({ type: "SET_RECIPES", payload: response.data });
+
+      // Iškart atnaujiname state, kad nereikėtų perkrauti puslapio
+      dispatch({ type: "SET_RECIPES", payload: [...state.recipes, response.data] });
 
       navigate("/");
     } catch (error) {
-      console.error("Error adding recipe", error);
+      console.error("Klaida pridedant receptą:", error);
     }
   };
 
   return (
-    <div>
-      <h1>Add New Recipe</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title:</label>
-          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-        </div>
-        <div>
-          <label>Image URL:</label>
-          <input type="text" value={image} onChange={(e) => setImage(e.target.value)} />
-        </div>
-        <button type="submit">Add Recipe</button>
-      </form>
+    <div className="add-recipe-page">
+      <h2 className="page-title">Pridėti naują receptą</h2>
+      <div className="add-recipe-form">
+        <label className="form-label">Recepto pavadinimas:</label>
+        <input
+          type="text"
+          className="form-input"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Įveskite recepto pavadinimą..."
+        />
+
+        <label className="form-label">Nuotraukos URL (nebūtina):</label>
+        <input
+          type="text"
+          className="form-input"
+          value={imageUrl}
+          onChange={(e) => setImageUrl(e.target.value)}
+          placeholder="Įveskite nuotraukos URL..."
+        />
+
+        <button className="add-recipe-btn" onClick={handleAddRecipe}>
+          Pridėti receptą
+        </button>
+      </div>
     </div>
   );
 };
