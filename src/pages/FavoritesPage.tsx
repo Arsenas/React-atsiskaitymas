@@ -12,16 +12,6 @@ const FavoritesPage = () => {
 
   return (
     <div className="favorites-page">
-      <div className="search-container">
-      <h2 className="page-title">Ieškoti mėgstamiausio recepto:</h2>
-      <input
-        type="text"
-        placeholder="Įveskite recepto pavadinimą..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="search-bar"
-      />
-      </div>
       <h2 className="page-title">Mėgstamiausi receptai</h2>
       <div className="recipe-list">
         {filteredFavorites.length > 0 ? (
