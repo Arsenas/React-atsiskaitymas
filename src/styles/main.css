@@ -226,7 +226,8 @@ body {
 .recipe-card-img {
   width: 100%;
   height: 150px;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
   border-radius: 5px;
 }
 
@@ -280,7 +281,8 @@ body {
   max-width: 300px;
   max-height: 250px;
   border-radius: 8px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 20px;
 }
 
@@ -587,6 +589,4 @@ body {
 
 h1, h2, h3, .logo {
   font-family: "Bad Script", cursive;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
