@@ -6,11 +6,24 @@
     font-family: Arial, sans-serif;
   }
   
-  // Bendras puslapio fonas ir spalvos
-  body {
-    background-color: #f8f8f8;
-    color: #333;
+ // BENDRAS PUSLAPIŲ FONAS
+body {
+    background-image: url("https://img.freepik.com/free-photo/copy-space-italian-food-ingredients_23-2148551732.jpg?t=st=1741956334~exp=1741959934~hmac=f7c0541df183ff4ec9d7bfd8e7f4ee3ba5e32c6af27c100b31f4a780e610c43f&w=1380");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
   }
+  
+  // Užtikriname, kad visa aplikacija paveldi fono stilių
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
   
   // Aplikacijos pagrindinis konteineris
   .app-container {
