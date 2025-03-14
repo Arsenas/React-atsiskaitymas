@@ -1,20 +1,20 @@
-import React from "react";
-import { useParams, Link } from "react-router-dom";
 import { useRecipeContext } from "../context/RecipeContext";
+import { useParams } from "react-router-dom";
 
 const RecipePage = () => {
   const { id } = useParams();
   const { state } = useRecipeContext();
+  const recipe = state.recipes.find((r) => r.id === id);
 
-  const recipe = state.recipes.find((recipe) => recipe.id === parseInt(id!));
+  if (!recipe) {
+    return <p className="error-text">Receptas nerastas...</p>;
+  }
 
   return (
-    <div>
-      <h1>{recipe?.title}</h1>
-      <img src={recipe?.image} alt={recipe?.title} width="150" />
-      <h2>Recipe Details</h2>
-      <p>Showing details for recipe ID: {id}</p>
-      <Link to={`/edit-recipe/${id}`}>Edit Recipe</Link>
+    <div className="recipe-page">
+      <h2 className="recipe-title">{recipe.title}</h2>
+      <img src={recipe.image || "https://via.placeholder.com/300"} alt={recipe.title} className="recipe-image" />
+      <p className="recipe-description">Aprašymas: Lorem ipsum dolor sit amet...</p>
     </div>
   );
 };
