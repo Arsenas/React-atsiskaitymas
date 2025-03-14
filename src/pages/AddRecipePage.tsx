@@ -8,21 +8,22 @@ const AddRecipePage = () => {
   const navigate = useNavigate();
 
   const [title, setTitle] = useState("");
+  const [description, setDescription] = useState(""); // Naujas aprašymo laukas
   const [imageUrl, setImageUrl] = useState("");
 
   const handleAddRecipe = async () => {
     if (!title.trim()) return;
 
     const newRecipe = {
-      id: Date.now().toString(), // Unikalus ID
+      id: Date.now().toString(),
       title,
-      image: imageUrl || "https://via.placeholder.com/400",
+      description: description.trim() || "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️", // Jei nėra aprašymo, naudoja placeholderį
+      image: imageUrl || "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg", // Pakeistas numatytasis paveikslėlis
     };
 
     try {
       const response = await axios.post("http://localhost:5000/recipes", newRecipe);
 
-      // Iškart atnaujiname state, kad nereikėtų perkrauti puslapio
       dispatch({ type: "SET_RECIPES", payload: [...state.recipes, response.data] });
 
       navigate("/");
@@ -42,6 +43,14 @@ const AddRecipePage = () => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Įveskite recepto pavadinimą..."
+        />
+
+        <label className="form-label">Aprašymas:</label>
+        <textarea
+          className="form-input"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder="Įveskite recepto aprašymą..."
         />
 
         <label className="form-label">Nuotraukos URL (nebūtina):</label>

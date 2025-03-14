@@ -39,14 +39,12 @@ const RecipePage = () => {
       </div>
       <div className="recipe-content">
         <img
-          src={recipe.image || "https://via.placeholder.com/400"}
+          src={recipe.image || "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"}
           alt={recipe.title}
           className="recipe-image"
         />
         <div className="recipe-details">
-          <p className="recipe-description">
-            Aprašymas: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
+          <p className="recipe-description">{recipe.description || "Aprašymas nepateiktas."}</p>
           <div className="button-group">
             <button className="favorite-btn" onClick={handleAddToFavorites}>Pridėti prie mėgstamiausių</button>
             <Link to={`/edit-recipe/${recipe.id}`} className="edit-btn">Redaguoti receptą</Link>
