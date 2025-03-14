@@ -29,18 +29,19 @@
       "title": "Sausainių tortas",
       "description": "Skanus greitai pagaminamas  tortas. Jums tiesiog reikia pasigaminti kremą, nes  torto pagrindas bus pagamintas iš sausainių. Ir kuo ilgiau tortas pasistovi, tuo jis tampa skanesnis. Vietoj glazūros, torto viršų galite padengti ištirpintu šokoladu arba pabarstyti sausainių trupiniais. Tortą puikiai papildo šviežios arba šaldytos uogos ir mėtos.",
       "image": "https://gaminimas.lt/images/receptai/12-sausainiu-tortas.jpeg.webp"
+    },
+    {
+      "id": "1741969263713",
+      "title": "friut salad",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
     }
   ],
   "favorites": [],
   "reviews": [
     {
-      "id": "1741966625573",
-      "text": "Skanūs receptai",
-      "author": "Arsenijus"
-    },
-    {
-      "id": "1741968316898",
-      "text": "Ziauriai gerai",
+      "id": "1741969693032",
+      "text": "Nice",
       "author": "Arsenij"
     }
   ]
