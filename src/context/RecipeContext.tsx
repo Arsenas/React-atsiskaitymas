@@ -44,31 +44,22 @@ const recipeReducer = (state: RecipeState, action: RecipeAction): RecipeState =>
   switch (action.type) {
     case "SET_RECIPES":
       return { ...state, recipes: action.payload };
-      case "ADD_TO_FAVORITES":
-        if (state.favorites.some((recipe) => recipe.id === action.payload.id)) {
-          return state; // Jei jau yra megstamiausiuose, nieko nedarome
-        }
-        return { ...state, favorites: [...state.favorites, action.payload] };      
-    case "ADD_REVIEW":
-      return { ...state, reviews: [...state.reviews, action.payload] };
-    case "EDIT_RECIPE":
-      return {
-        ...state,
-        recipes: state.recipes.map((recipe) =>
-          recipe.id === action.payload.id
-            ? { ...recipe, title: action.payload.title, image: action.payload.image }
-            : recipe
-        ),
-      };
+    case "ADD_TO_FAVORITES":
+      if (state.favorites.some((recipe) => recipe.id === action.payload.id)) {
+        return state; // 🔹 Jei jau yra mėgstamiausiuose, nieko nedarome
+      }
+      return { ...state, favorites: [...state.favorites, action.payload] };
     case "DELETE_RECIPE":
       return {
         ...state,
         recipes: state.recipes.filter((recipe) => recipe.id !== action.payload),
+        favorites: state.favorites.filter((recipe) => recipe.id !== action.payload),
       };
     default:
       return state;
   }
 };
+
 
 // Konteksto tiekėjas
 const RecipeProvider = ({ children }: { children: ReactNode }) => {
