@@ -57,21 +57,23 @@ const ReviewsPage = () => {
   return (
     <div className="reviews-page">
       <h2 className="page-title">Atsiliepimai</h2>
-
+  
       <div className="reviews-list">
         {reviews.length > 0 ? (
           reviews.map((review) => (
             <div key={review.id} className="review-card">
-              <p className="review-author"><strong>{review.author}:</strong></p>
-              <p className="review-text">{review.text}</p>
-              <button className="delete-review-btn" onClick={() => handleDeleteReview(review.id)}>❌</button>
+              <div className="review-content">
+                <span className="review-author"><strong>{review.author}:</strong></span>
+                <span className="review-text">{review.text}</span>
+              </div>
+              <button className="delete-review-btn" onClick={() => handleDeleteReview(review.id)}>X</button>
             </div>
           ))
         ) : (
           <p className="no-reviews">Kol kas nėra atsiliepimų.</p>
         )}
       </div>
-
+  
       <div className="add-review">
         <input
           type="text"
@@ -91,7 +93,7 @@ const ReviewsPage = () => {
         </button>
       </div>
     </div>
-  );
+  );  
 };
 
 export default ReviewsPage;

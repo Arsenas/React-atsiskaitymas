@@ -1,13 +1,20 @@
 {
   "recipes": [
     {
-      "id": "f1f8",
-      "title": "picl",
-      "image": "https://lindamziedrich.files.wordpress.com/2012/11/pickle-cocktail.jpg?w=223"
-    },
-    {
       "id": "1741953987912",
       "title": "Sigma",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+    },
+    {
+      "id": "1741954495048",
+      "title": "SigmaSigma",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+    },
+    {
+      "id": "1741955723862",
+      "title": "aas",
       "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
       "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
     }
@@ -15,8 +22,8 @@
   "favorites": [],
   "reviews": [
     {
-      "id": "1741953108530",
-      "text": "Gaidys",
+      "id": "1741955364598",
+      "text": "Nice",
       "author": "Senia"
     }
   ]

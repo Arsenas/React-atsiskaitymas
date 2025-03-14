@@ -47,11 +47,11 @@ const AddRecipePage = () => {
 
         <label className="form-label">Aprašymas:</label>
         <textarea
-          className="form-input"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          placeholder="Įveskite recepto aprašymą..."
-        />
+            className="description-input"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Įveskite recepto aprašymą..."
+/>
 
         <label className="form-label">Nuotraukos URL (nebūtina):</label>
         <input

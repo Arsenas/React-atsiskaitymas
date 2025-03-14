@@ -149,10 +149,10 @@
   
   .recipe-image {
     width: 100%;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 300px;
+    max-height: 250px;
     border-radius: 8px;
-    object-fit: fill; 
+    object-fit: cover;
     margin-bottom: 20px;
   }
   
@@ -284,31 +284,41 @@
   
   .review-card {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     background-color: #f9f9f9;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 5px;
     margin-bottom: 10px;
     position: relative;
+    gap: 10px;
   }
+
+  
+.review-content {
+    display: flex;
+    gap: 8px; 
+    align-items: center;
+    flex-wrap: wrap; 
+  }
+  
   
   .review-author {
     font-weight: bold;
+    color: #333;
+  }
+
+  .review-text {
+    flex: 1;
+    color: #555;
   }
   
-  .review-text {
-    margin-top: 5px;
-  }
   
   .delete-review-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     background: none;
     border: none;
-    color: red;
-    font-size: 18px;
+    color: #999999;
+    font-size: 16px;
     cursor: pointer;
   }
   
@@ -324,6 +334,26 @@
     border-radius: 5px;
     width: 100%;
   }
+
+  .review-author-input,
+.review-input,
+.description-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  resize: none; // Neleidžiame rankiniu būdu keisti dydžio
+  overflow: hidden;
+  min-height: 40px;
+}
+
+// Automatinis dydžio keitimas priklausomai nuo teksto kiekio
+.review-input:focus,
+.description-input:focus {
+  min-height: 60px;
+  max-height: 150px;
+  overflow-y: auto;
+}
   
   .add-review-btn {
     background-color: #28a745;
