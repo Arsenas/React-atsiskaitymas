@@ -8,16 +8,25 @@ interface Recipe {
   image?: string;
 }
 
+// Atsiliepimo duomenų tipas
+interface Review {
+  id: string;
+  text: string;
+}
+
 // Konteksto būsenos tipas
 interface RecipeState {
   recipes: Recipe[];
   favorites: Recipe[];
+  reviews: Review[]; //  Pridedame trūkstamą reviews
 }
 
 // Veiksmų tipai
 type RecipeAction =
   | { type: "SET_RECIPES"; payload: Recipe[] }
-  | { type: "ADD_TO_FAVORITES"; payload: Recipe };
+  | { type: "ADD_TO_FAVORITES"; payload: Recipe }
+  | { type: "ADD_REVIEW"; payload: Review } //  Pridėtas ADD_REVIEW
+  | { type: "EDIT_RECIPE"; payload: { id: string; title: string; image?: string } }; //  Pridėtas EDIT_RECIPE
 
 // Sukuriame receptų kontekstą su numatytomis reikšmėmis
 const RecipeContext = createContext<{ state: RecipeState; dispatch: React.Dispatch<RecipeAction> } | null>(null);
@@ -26,6 +35,7 @@ const RecipeContext = createContext<{ state: RecipeState; dispatch: React.Dispat
 const initialState: RecipeState = {
   recipes: [],
   favorites: [],
+  reviews: [], //  Pridėtas tuščias atsiliepimų masyvas
 };
 
 // Reducer funkcija
@@ -35,6 +45,17 @@ const recipeReducer = (state: RecipeState, action: RecipeAction): RecipeState =>
       return { ...state, recipes: action.payload };
     case "ADD_TO_FAVORITES":
       return { ...state, favorites: [...state.favorites, action.payload] };
+    case "ADD_REVIEW":
+      return { ...state, reviews: [...state.reviews, action.payload] };
+    case "EDIT_RECIPE":
+      return {
+        ...state,
+        recipes: state.recipes.map((recipe) =>
+          recipe.id === action.payload.id
+            ? { ...recipe, title: action.payload.title, image: action.payload.image }
+            : recipe
+        ),
+      };
     default:
       return state;
   }
