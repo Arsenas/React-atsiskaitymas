@@ -1,19 +1,34 @@
 {
   "recipes": [
     {
-      "id": 1,
-      "title": "Spaghetti",
-      "image": "https://picsum.photos/150"
+      "id": "1741953987912",
+      "title": "Sigma",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
     },
     {
-      "id": 2,
-      "title": "Tacos",
-      "image": "https://picsum.photos/150"
+      "id": "1741954495048",
+      "title": "SigmaSigma",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
     },
     {
-      "id": "02a1",
-      "title": "Spatheti",
-      "image": "https://veganwithgusto.com/wp-content/uploads/2021/05/spicy-spaghetti-arrabbiata.jpg"
+      "id": "1741955723862",
+      "title": "aas",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+    },
+    {
+      "id": "1741957054612",
+      "title": "aasd",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+    },
+    {
+      "id": "1741957062075",
+      "title": "asdasd",
+      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
+      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
     }
   ],
   "favorites": [],

@@ -1,10 +1,25 @@
-import React from "react";
+import { useRecipeContext } from "../context/RecipeContext";
+import { Link } from "react-router-dom";
 
 const FavoritesPage = () => {
+  const { state } = useRecipeContext();
+
   return (
-    <div>
-      <h1>Your Favorite Recipes</h1>
-      <p>Here you can find your saved favorite recipes.</p>
+    <div className="favorites-page">
+      <h2 className="page-title">Megstamiausi receptai</h2>
+      <div className="recipe-list">
+        {state.favorites.length > 0 ? (
+          state.favorites.map((recipe) => (
+            <div key={recipe.id} className="recipe-card">
+              <img src={recipe.image} alt={recipe.title} className="recipe-card-img" />
+              <h3>{recipe.title}</h3>
+              <Link to={`/recipe/${recipe.id}`} className="view-recipe-btn">Peržiūrėti receptą</Link>
+            </div>
+          ))
+        ) : (
+          <p className="no-recipes">Kol kas nėra mėgstamiausių receptų.</p>
+        )}
+      </div>
     </div>
   );
 };

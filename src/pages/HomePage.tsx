@@ -1,31 +1,25 @@
-import React, { useEffect } from "react";
 import { useRecipeContext } from "../context/RecipeContext";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
-  const { state, dispatch } = useRecipeContext();
-
-  useEffect(() => {
-    console.log("Recipes from context:", state.recipes);
-  }, [state.recipes]);
+  const { state } = useRecipeContext();
 
   return (
-    <div>
-      <h1>Welcome to Recipe Finder</h1>
-      <p>Search for your favorite recipes!</p>
-
-      <h2>Available Recipes</h2>
-      <ul>
+    <div className="home-page">
+      <h2>Visi receptai</h2>
+      <div className="recipe-list">
         {state.recipes.length > 0 ? (
           state.recipes.map((recipe) => (
-            <li key={recipe.id}>
-              <h3>{recipe.title}</h3>
-              <img src={recipe.image} alt={recipe.title} width="150" />
-            </li>
+            <div key={recipe.id} className="recipe-card">
+              <img src={recipe.image || "https://via.placeholder.com/150"} alt={recipe.title} className="recipe-card-img" />
+              <h3 className="recipe-title">{recipe.title}</h3>
+              <Link to={`/recipe/${recipe.id}`} className="view-recipe-btn">Peržiūrėti receptą</Link>
+            </div>
           ))
         ) : (
-          <p>Loading recipes...</p>
+          <p className="no-recipes">Receptų kol kas nėra.</p>
         )}
-      </ul>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,490 @@
+// Nuresetiname visus standartinius nustatymus
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+ // BENDRAS PUSLAPIŲ FONAS
+body {
+    background-image: url("https://img.freepik.com/free-photo/copy-space-italian-food-ingredients_23-2148551732.jpg?t=st=1741956334~exp=1741959934~hmac=f7c0541df183ff4ec9d7bfd8e7f4ee3ba5e32c6af27c100b31f4a780e610c43f&w=1380");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  // Užtikriname, kad visa aplikacija paveldi fono stilių
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  // Aplikacijos pagrindinis konteineris
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  // Vieta, kur atvaizduojami puslapiai
+  .content {
+    margin-top: 20px;
+  }
+
+  // Navigacija
+  .navbar {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-list li {
+    display: inline;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+  
+  .nav-list a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  .navbar a:hover {
+    background-color: #555;
+  }
+  
+  .page-content {
+    margin-top: 100px; // Visas puslapio turinys pasislenka žemyn, kad nebūtų po navbaru
+  }
+  
+  // Receptu saraso stiliai
+.home-page {
+    text-align: center;
+  }
+  
+  .recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Automatinis prisitaikymas
+    gap: 50px;
+    max-width: 1000px; // Užtikriname, kad 4 receptai tilptų normaliame ekrane
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* MEDIA QUERY: Mažesniems ekranams */
+  @media (max-width: 1024px) {
+    .recipe-list {
+      grid-template-columns: repeat(3, 1fr); // 3 receptai per eilutę vidutinio dydžio ekrane
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .recipe-list {
+      grid-template-columns: repeat(2, 1fr); // 2 receptai per eilutę mažesniame ekrane
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .recipe-list {
+      grid-template-columns: repeat(1, 1fr); // 1 receptas per eilutę telefone
+    }
+  }
+  
+  .recipe-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .recipe-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .recipe-card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: fill;
+    border-radius: 5px;
+  }
+  
+  .recipe-title {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .view-recipe-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .view-recipe-btn:hover {
+    background-color: #0056b3;
+  }
+
+  // Receptu detaliu puslapis
+.recipe-page {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .recipe-header {
+    margin-bottom: 20px;
+  }
+  
+  .recipe-title {
+    font-size: 26px;
+    color: #333;
+  }
+  
+  .recipe-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .recipe-image {
+    width: 100%;
+    max-width: 300px;
+    max-height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .recipe-details {
+    text-align: left;
+    max-width: 600px;
+  }
+  
+  .recipe-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+
+
+  // Receptu redagavimo page
+.edit-recipe-page {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-label {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .save-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .save-btn:hover {
+    background-color: #218838;
+  }
+
+  .favorites-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Automatinis prisitaikymas
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  
+  /* MEDIA QUERY: Mažesniems ekranams */
+  @media (max-width: 1024px) {
+    .favorites-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .favorites-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .favorites-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // Recepto puslapiu mygtukai
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .favorite-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .favorite-btn:hover {
+    background-color: #218838;
+  }
+  
+  .edit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  // Atsiliepimu puslapis
+.reviews-page {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .reviews-list {
+    margin-top: 20px;
+  }
+  
+  .review-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    gap: 10px;
+  }
+
+  
+.review-content {
+    display: flex;
+    gap: 8px; 
+    align-items: center;
+    flex-wrap: wrap; 
+  }
+  
+  
+  .review-author {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .review-text {
+    flex: 1;
+    color: #555;
+  }
+  
+  
+  .delete-review-btn {
+    background: none;
+    border: none;
+    color: #999999;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .add-review {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .review-author-input, .review-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .review-author-input,
+.review-input,
+.description-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  resize: none; // Neleidžiame rankiniu būdu keisti dydžio
+  overflow: hidden;
+  min-height: 40px;
+}
+
+// Automatinis dydžio keitimas priklausomai nuo teksto kiekio
+.review-input:focus,
+.description-input:focus {
+  min-height: 60px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+  
+  .add-review-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-review-btn:hover {
+    background-color: #218838;
+  }
+  
+  // Mygtukas pasalinti recepta
+
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  //prideti recepta stilius 
+
+  .add-recipe-page {
+    max-width: 600px;
+    margin: 40px auto 40px; // Pridėtas margin-top, kad nebūtų po navbaru
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-recipe-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .add-recipe-btn:hover {
+    background-color: #218838;
+  }

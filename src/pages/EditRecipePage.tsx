@@ -1,66 +1,54 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
 import { useRecipeContext } from "../context/RecipeContext";
-import axios from "axios";
+import { useParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const EditRecipePage = () => {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>(); //  Užtikriname, kad id visada bus string
+
+if (!id) {
+  return <p className="error-text">Recepto ID nerastas.</p>; // Jei id neegzistuoja, rodome klaida
+}
+
   const { state, dispatch } = useRecipeContext();
   const navigate = useNavigate();
 
-  const recipe = state.recipes.find((recipe) => recipe.id === parseInt(id!));
+  const recipe = state.recipes.find((r) => r.id === id);
 
-  const [title, setTitle] = useState(recipe?.title || "");
-  const [image, setImage] = useState(recipe?.image || "");
+  const [title, setTitle] = useState(recipe ? recipe.title : "");
+  const [image, setImage] = useState(recipe ? recipe.image : "");
 
-  useEffect(() => {
-    if (recipe) {
-      setTitle(recipe.title);
-      setImage(recipe.image);
-    }
-  }, [recipe]);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!title || !image) {
-      alert("Please enter both title and image URL");
-      return;
-    }
-
-    try {
-      const updatedRecipe = { title, image };
-      const response = await axios.patch(
-        `http://localhost:5000/recipes/${id}`,
-        updatedRecipe
-      );
-      dispatch({ type: "SET_RECIPES", payload: response.data });
-      navigate(`/recipe/${id}`);
-    } catch (error) {
-      console.error("Error updating recipe", error);
-    }
+  const handleSave = () => {
+    dispatch({ type: "EDIT_RECIPE", payload: { id, title, image } });
+    navigate(`/recipe/${id}`);
   };
 
+  if (!recipe) {
+    return <p className="error-text">Receptas nerastas...</p>;
+  }
+
   return (
-    <div>
-      <h1>Edit Recipe</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title:</label>
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Image URL:</label>
-          <input
-            type="text"
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
-          />
-        </div>
-        <button type="submit">Save Changes</button>
+    <div className="edit-recipe-page">
+      <h2 className="page-title">Redaguoti receptą</h2>
+      <form className="edit-form">
+        <label className="form-label">Pavadinimas:</label>
+        <input
+          type="text"
+          className="form-input"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+
+        <label className="form-label">Paveikslėlio URL:</label>
+        <input
+          type="text"
+          className="form-input"
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+        />
+
+        <button type="button" className="save-btn" onClick={handleSave}>
+          Išsaugoti pakeitimus
+        </button>
       </form>
     </div>
   );
