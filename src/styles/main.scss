@@ -1,0 +1,26 @@
+// Nuresetiname visus standartinius nustatymus
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  // Bendras puslapio fonas ir spalvos
+  body {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  // Aplikacijos pagrindinis konteineris
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  // Vieta, kur atvaizduojami puslapiai
+  .content {
+    margin-top: 20px;
+  }
+  
