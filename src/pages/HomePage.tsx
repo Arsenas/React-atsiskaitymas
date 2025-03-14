@@ -18,7 +18,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <h2>Ieškoti recepto:</h2>
-      <div className="search-container"> {/* Šitas container centrinis */}
+      <div className="search-container">
         <input
           type="text"
           placeholder="Įveskite recepto pavadinimą..."
@@ -26,16 +26,17 @@ const HomePage = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           className="search-bar"
         />
-        {searchTerm && (
-          <ul className="search-dropdown">
-            {filteredRecipes.map((recipe) => (
+        <ul className={`search-dropdown ${searchTerm ? "show" : ""}`}>
+          {filteredRecipes.length > 0 ? (
+            filteredRecipes.map((recipe) => (
               <li key={recipe.id} onClick={() => handleSelectRecipe(recipe.id)}>
                 {recipe.title}
               </li>
-            ))}
-            {filteredRecipes.length === 0 && <li>Nėra rezultatų</li>}
-          </ul>
-        )}
+            ))
+          ) : (
+            searchTerm && <li>Nėra rezultatų</li>
+          )}
+        </ul>
       </div>
     </div>
   );

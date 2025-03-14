@@ -55,9 +55,10 @@ body {
   
   .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; // Išskirsto logotipą ir nuorodas į kraštus
     align-items: center;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1500px; // Neleidžia per daug plėstis
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -69,9 +70,9 @@ body {
   }
   
   .nav-list {
-    list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px; // Tarpas tarp nuorodų
+    list-style: none;
   }
   
   .nav-list li {
@@ -141,28 +142,38 @@ body {
     list-style: none;
     background: white;
     border: 1px solid #ccc;
-    max-width: 400px; // Uždeda limitą, kad dropdown nebūtų per siauras
+    max-width: 400px;
     width: 100%;
+    margin-top: 3px;
     padding: 0;
     position: absolute;
-    top: 100%; // Pastato dropdown iškart po paieškos laukeliu
+    top: 100%; // Po paieškos laukeliu
     left: 50%;
-    transform: translateX(-50%); // Centruoja jį tiksliai pagal paieškos laukelį
+    transform: translateX(-50%);
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+    opacity: 0;  // Pradžioje paslėpta
+    visibility: hidden; // Dropdown nematomas, kol neatsiranda paieškos tekstas
+    transform: translate(-50%, -10px); // Pradeda šiek tiek pakeltas
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  }
+  
+  .search-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0); // Nusileidžia į savo vietą
   }
   
   .search-dropdown li {
     padding: 10px;
     cursor: pointer;
     text-align: center;
-    width: 100%; // Užtikrina, kad dropdown elementai neužimtų per mažai vietos
   }
   
   .search-dropdown li:hover {
     background: #f0f0f0;
   }
-
   // Receptu saraso stiliai
 .home-page {
     text-align: center;
