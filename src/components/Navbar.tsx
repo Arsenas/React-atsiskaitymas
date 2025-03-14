@@ -9,7 +9,7 @@ const Navbar = () => {
           <li><Link to="/">Pagrindinis</Link></li>
           <li><Link to="/favorites">Megstamiausi</Link></li>
           <li><Link to="/reviews">Atsiliepimai</Link></li>
-          <li><Link to="/add-recipe">Prideti recepta</Link></li>
+          <li><Link to="/add-recipe">Pridėti receptą</Link></li>
         </ul>
       </div>
     </nav>

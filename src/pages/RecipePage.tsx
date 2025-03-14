@@ -1,5 +1,5 @@
 import { useRecipeContext } from "../context/RecipeContext";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const RecipePage = () => {
   const { id } = useParams();
@@ -25,7 +25,10 @@ const RecipePage = () => {
           <p className="recipe-description">
             Aprašymas: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
-          <button className="favorite-btn">Pridėti į mėgstamiausius</button>
+          <div className="button-group">
+            <button className="favorite-btn">Pridėti į mėgstamiausius</button>
+            <Link to={`/edit-recipe/${recipe.id}`} className="edit-btn">✏️ Redaguoti receptą</Link>
+          </div>
         </div>
       </div>
     </div>
