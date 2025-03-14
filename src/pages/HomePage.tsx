@@ -1,24 +1,42 @@
+import { useState } from "react";
 import { useRecipeContext } from "../context/RecipeContext";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const { state } = useRecipeContext();
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
+
+  const filteredRecipes = state.recipes.filter((recipe) =>
+    recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const handleSelectRecipe = (id: string) => {
+    navigate(`/recipe/${id}`);
+  };
 
   return (
     <div className="home-page">
-      <h2>Visi receptai</h2>
-      <div className="recipe-list">
-        {state.recipes.length > 0 ? (
-          state.recipes.map((recipe) => (
-            <div key={recipe.id} className="recipe-card">
-              <img src={recipe.image || "https://via.placeholder.com/150"} alt={recipe.title} className="recipe-card-img" />
-              <h3 className="recipe-title">{recipe.title}</h3>
-              <Link to={`/recipe/${recipe.id}`} className="view-recipe-btn">Peržiūrėti receptą</Link>
-            </div>
-          ))
-        ) : (
-          <p className="no-recipes">Receptų kol kas nėra.</p>
-        )}
+      <h2>Ieškoti recepto:</h2>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Įveskite recepto pavadinimą..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-bar"
+        />
+        <ul className={`search-dropdown ${searchTerm ? "show" : ""}`}>
+          {filteredRecipes.length > 0 ? (
+            filteredRecipes.map((recipe) => (
+              <li key={recipe.id} onClick={() => handleSelectRecipe(recipe.id)}>
+                {recipe.title}
+              </li>
+            ))
+          ) : (
+            searchTerm && <li>Nėra rezultatų</li>
+          )}
+        </ul>
       </div>
     </div>
   );

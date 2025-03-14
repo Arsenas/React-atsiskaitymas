@@ -1,25 +1,33 @@
+import { useState } from "react";
 import { useRecipeContext } from "../context/RecipeContext";
 import { useParams, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import axios from "axios";
 
 const EditRecipePage = () => {
-  const { id } = useParams<{ id: string }>(); //  Užtikriname, kad id visada bus string
-
-if (!id) {
-  return <p className="error-text">Recepto ID nerastas.</p>; // Jei id neegzistuoja, rodome klaida
-}
-
+  const { id } = useParams();
   const { state, dispatch } = useRecipeContext();
   const navigate = useNavigate();
 
   const recipe = state.recipes.find((r) => r.id === id);
 
-  const [title, setTitle] = useState(recipe ? recipe.title : "");
-  const [image, setImage] = useState(recipe ? recipe.image : "");
+  const [title, setTitle] = useState(recipe?.title || "");
+  const [description, setDescription] = useState(recipe?.description || "");
+  const [image, setImage] = useState(recipe?.image || "");
 
-  const handleSave = () => {
-    dispatch({ type: "EDIT_RECIPE", payload: { id, title, image } });
-    navigate(`/recipe/${id}`);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!title.trim() || !description.trim()) return alert("Pavadinimas ir aprašymas negali būti tušti!");
+
+    const updatedRecipe = { id: id || "", title, description, image };
+
+
+    try {
+      await axios.put(`http://localhost:5000/recipes/${id}`, updatedRecipe);
+      dispatch({ type: "EDIT_RECIPE", payload: updatedRecipe });
+      navigate(`/recipe/${id}`);
+    } catch (error) {
+      console.error("Klaida atnaujinant receptą:", error);
+    }
   };
 
   if (!recipe) {
@@ -28,27 +36,18 @@ if (!id) {
 
   return (
     <div className="edit-recipe-page">
-      <h2 className="page-title">Redaguoti receptą</h2>
-      <form className="edit-form">
-        <label className="form-label">Pavadinimas:</label>
-        <input
-          type="text"
-          className="form-input"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+      <h2>Redaguoti receptą</h2>
+      <form onSubmit={handleSubmit} className="edit-recipe-form">
+        <label>Pavadinimas:</label>
+        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
 
-        <label className="form-label">Paveikslėlio URL:</label>
-        <input
-          type="text"
-          className="form-input"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-        />
+        <label>Aprašymas:</label>
+        <textarea value={description} onChange={(e) => setDescription(e.target.value)} required />
 
-        <button type="button" className="save-btn" onClick={handleSave}>
-          Išsaugoti pakeitimus
-        </button>
+        <label>Nuotraukos URL:</label>
+        <input type="text" value={image} onChange={(e) => setImage(e.target.value)} />
+
+        <button type="submit" className="save-btn">Išsaugoti pakeitimus</button>
       </form>
     </div>
   );

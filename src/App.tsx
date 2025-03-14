@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import AllRecipesPage from "./pages/AllRecipesPage"
 import RecipePage from "./pages/RecipePage";
 import FavoritesPage from "./pages/FavoritesPage";
 import ReviewsPage from "./pages/ReviewsPage";
@@ -14,6 +15,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/all-recipes" element={<AllRecipesPage />} />
         <Route path="/recipe/:id" element={<RecipePage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />

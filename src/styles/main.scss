@@ -8,7 +8,7 @@
   
  // BENDRAS PUSLAPIŲ FONAS
 body {
-    background-image: url("https://img.freepik.com/free-photo/copy-space-italian-food-ingredients_23-2148551732.jpg?t=st=1741956334~exp=1741959934~hmac=f7c0541df183ff4ec9d7bfd8e7f4ee3ba5e32c6af27c100b31f4a780e610c43f&w=1380");
+    background-image: url("https://cdn.create.vista.com/api/media/medium/362010546/stock-photo-pepper-garlic-ginger-bay-leaf-spices-lime-wooden-spoon-salt?token=");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -40,8 +40,8 @@ body {
   // Navigacija
   .navbar {
     width: 100%;
-    background-color: #333;
-    color: white;
+    background-color:white;
+    color:  #333;
     display: flex;
     justify-content: center;
     padding: 15px 0;
@@ -55,23 +55,24 @@ body {
   
   .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; // Išskirsto logotipą ir nuorodas į kraštus
     align-items: center;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1500px; // Neleidžia per daug plėstis
     margin: 0 auto;
     padding: 0 20px;
   }
   
   .logo {
-    color: white;
-    font-size: 22px;
+    color: #333;
+    font-size: 25px;
     font-weight: bold;
   }
   
   .nav-list {
-    list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px; // Tarpas tarp nuorodų
+    list-style: none;
   }
   
   .nav-list li {
@@ -80,7 +81,7 @@ body {
   
   .nav-list a {
     text-decoration: none;
-    color: white;
+    color: #333;
     font-size: 18px;
     padding: 8px 12px;
   }
@@ -91,24 +92,108 @@ body {
   }
 
   .navbar a {
-    color: white;
+    color: #333;
     text-decoration: none;
     padding: 10px 20px;
   }
   
   .navbar a:hover {
-    background-color: #555;
+    background-color: #bcbcbc;
   }
   
   .page-content {
     margin-top: 100px; // Visas puslapio turinys pasislenka žemyn, kad nebūtų po navbaru
   }
+
+  //search baras
+
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Užtikrina, kad visi elementai būtų per vidurį
+    position: relative; // Svarbu, kad dropdown būtų išlygiuotas pagal šį konteinerį
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
   
-  // Receptu saraso stiliai
-.home-page {
+  .search-bar:focus {
+    border-color: #28a745;
+  }
+  
+  .no-recipes {
+    text-align: center;
+    font-size: 18px;
+    color: #ff0000;
+    margin-top: 20px;
+  }
+  //searchbaro dropdownas
+
+  .search-dropdown {
+    list-style: none;
+    background: white;
+    border: 1px solid #ccc;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 3px;
+    padding: 0;
+    position: absolute;
+    top: 100%; // Po paieškos laukeliu
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+    opacity: 0;  // Pradžioje paslėpta
+    visibility: hidden; // Dropdown nematomas, kol neatsiranda paieškos tekstas
+    transform: translate(-50%, -10px); // Pradeda šiek tiek pakeltas
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  }
+  
+  .search-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0); // Nusileidžia į savo vietą
+  }
+  
+  .search-dropdown li {
+    padding: 10px;
+    cursor: pointer;
     text-align: center;
   }
   
+  .search-dropdown li:hover {
+    background: #f0f0f0;
+  }
+  // Receptu saraso stiliai
+.home-page {
+    text-align: center;
+    margin-top: 250px;
+  }
+.home-page h2 {
+    color: white;
+    font-size: 50px;
+}
+.page-title {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+.reviews-page .page-title, .add-recipe-page .page-title {
+    color:#333;
+
+}
+
+
   .recipe-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Automatinis prisitaikymas
@@ -228,54 +313,56 @@ body {
 
 
   // Receptu redagavimo page
-.edit-recipe-page {
-    max-width: 600px;
-    margin: 40px auto;
-    background-color: white;
+  .edit-recipe-page {
+    max-width: 500px;
+    margin: 50px auto;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
   
-  .page-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .edit-form {
+  .edit-recipe-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
   
-  .form-label {
-    text-align: left;
-    font-size: 16px;
+  .edit-recipe-form label {
+    font-size: 1rem;
     font-weight: bold;
-    color: #333;
+    text-align: left;
   }
   
-  .form-input {
+  .edit-recipe-form input,
+  .edit-recipe-form textarea {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .edit-recipe-form textarea {
+    resize: none; // Neleidžia ištempti į šonus
+    min-height: 100px;
+    max-width: 460px;
   }
   
   .save-btn {
-    background-color: #28a745;
+    background: #ff6600;
     color: white;
-    padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
     cursor: pointer;
-    font-size: 16px;
+    border-radius: 4px;
+    transition: 0.3s;
   }
   
   .save-btn:hover {
-    background-color: #218838;
+    background: #e65c00;
   }
 
   .favorites-list {
@@ -401,6 +488,11 @@ body {
     flex-direction: column;
     gap: 10px;
   }
+
+  .review-author-input {
+    margin-top: 20px;
+  }
+
   
   .review-author-input, .review-input {
     padding: 10px;
@@ -420,7 +512,6 @@ body {
   overflow: hidden;
   min-height: 40px;
 }
-
 // Automatinis dydžio keitimas priklausomai nuo teksto kiekio
 .review-input:focus,
 .description-input:focus {
@@ -474,10 +565,44 @@ body {
     align-items: center;
   }
 
+  .add-recipe-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .add-recipe-form label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .add-recipe-form input,
+.add-recipe-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.add-recipe-form textarea,
+.edit-recipe-form textarea {
+  width: 550px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-height: 100px; // Fiksuotas pradinis aukštis
+  resize: none; // Neleidžia tempimo rankiniu būdu
+  transition: height 0.2s ease-in-out; // Sklandi animacija
+}
   .add-recipe-btn {
     background-color: #28a745;
     color: white;
     padding: 10px 15px;
+    margin-top: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -487,4 +612,8 @@ body {
   
   .add-recipe-btn:hover {
     background-color: #218838;
+  }
+
+  h1, h2, h3, .logo {
+    font-family: 'Bad Script', cursive;
   }
