@@ -177,6 +177,7 @@ body {
   // Receptu saraso stiliai
 .home-page {
     text-align: center;
+    margin-top: 250px;
   }
   
   .recipe-list {
@@ -496,9 +497,6 @@ body {
   overflow: hidden;
   min-height: 40px;
 }
-.description-input {
-    margin: 20px 0;
-}
 // Automatinis dydžio keitimas priklausomai nuo teksto kiekio
 .review-input:focus,
 .description-input:focus {
@@ -552,10 +550,39 @@ body {
     align-items: center;
   }
 
+  .add-recipe-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .add-recipe-form label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .add-recipe-form input,
+.add-recipe-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.add-recipe-form textarea {
+    resize: none; // Neleidžia ištempti į šonus
+    min-height: 100px;
+    width: 500px;
+  }
+
   .add-recipe-btn {
     background-color: #28a745;
     color: white;
     padding: 10px 15px;
+    margin-top: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
