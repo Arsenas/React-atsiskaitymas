@@ -3,7 +3,12 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const EditRecipePage = () => {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>(); //  Užtikriname, kad id visada bus string
+
+if (!id) {
+  return <p className="error-text">Recepto ID nerastas.</p>; // Jei id neegzistuoja, rodome klaida
+}
+
   const { state, dispatch } = useRecipeContext();
   const navigate = useNavigate();
 

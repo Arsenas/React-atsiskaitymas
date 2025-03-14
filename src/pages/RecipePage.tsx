@@ -8,20 +8,31 @@ const RecipePage = () => {
   const navigate = useNavigate();
   const recipe = state.recipes.find((r) => r.id === id);
 
-  const handleDeleteRecipe = async () => {
+  const handleAddToFavorites = () => {
     if (!recipe) return;
+    dispatch({ type: "ADD_TO_FAVORITES", payload: recipe });
+  };
+  
+  <button className="favorite-btn" onClick={handleAddToFavorites}>
+   Pridėti prie mėgstamiausių
+  </button>
+  
+
+  const handleDeleteRecipe = async () => {
+    if (!recipe || !recipe.id) return; // Užtikriname, kad `recipe.id` nėra undefined
   
     const confirmDelete = window.confirm("Ar tikrai norite pasalinti si recepta?");
     if (!confirmDelete) return;
   
     try {
       await axios.delete(`http://localhost:5000/recipes/${recipe.id}`);
-      dispatch({ type: "DELETE_RECIPE", payload: recipe.id });
+      dispatch({ type: "DELETE_RECIPE", payload: recipe.id as string }); // Užtikriname, kad perduodame string
       navigate("/");
     } catch (error) {
       console.error("Klaida salinant recepta:", error);
     }
   };
+  
 
   if (!recipe) {
     return <p className="error-text">Receptas nerastas...</p>;

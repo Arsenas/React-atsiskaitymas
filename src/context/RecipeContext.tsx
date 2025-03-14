@@ -25,8 +25,9 @@ interface RecipeState {
 type RecipeAction =
   | { type: "SET_RECIPES"; payload: Recipe[] }
   | { type: "ADD_TO_FAVORITES"; payload: Recipe }
-  | { type: "ADD_REVIEW"; payload: Review } //  Pridėtas ADD_REVIEW
-  | { type: "EDIT_RECIPE"; payload: { id: string; title: string; image?: string } }; //  Pridėtas EDIT_RECIPE
+  | { type: "ADD_REVIEW"; payload: Review }
+  | { type: "EDIT_RECIPE"; payload: { id: string; title: string; image?: string } }
+  | { type: "DELETE_RECIPE"; payload: string }; //  Užtikriname, kad payload yra string
 
 // Sukuriame receptų kontekstą su numatytomis reikšmėmis
 const RecipeContext = createContext<{ state: RecipeState; dispatch: React.Dispatch<RecipeAction> } | null>(null);
@@ -43,8 +44,11 @@ const recipeReducer = (state: RecipeState, action: RecipeAction): RecipeState =>
   switch (action.type) {
     case "SET_RECIPES":
       return { ...state, recipes: action.payload };
-    case "ADD_TO_FAVORITES":
-      return { ...state, favorites: [...state.favorites, action.payload] };
+      case "ADD_TO_FAVORITES":
+        if (state.favorites.some((recipe) => recipe.id === action.payload.id)) {
+          return state; // Jei jau yra megstamiausiuose, nieko nedarome
+        }
+        return { ...state, favorites: [...state.favorites, action.payload] };      
     case "ADD_REVIEW":
       return { ...state, reviews: [...state.reviews, action.payload] };
     case "EDIT_RECIPE":
