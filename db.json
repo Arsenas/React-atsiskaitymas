@@ -1,46 +1,52 @@
 {
   "recipes": [
     {
-      "id": "1741975736654",
-      "title": "Skanus didysis sumustinis",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
-    },
-    {
       "id": "1741976726004",
       "title": "Klasikiniai varškėčiai",
       "description": "Lengvi ir purūs varškėčiai, kurie yra itin populiarūs tiek pusryčiams, tiek kaip desertas. Varškėčiams būdingas švelnus varškės skonis ir minkšta tekstūra, kurią galima papildyti vanile ar citrinos žievele, suteikiant gaivumo. Jie kepami iki auksinės spalvos ir patiekiami su grietine, medumi, uogiene ar šviežiomis uogomis. Tai paprastas, tačiau skanus ir sotus patiekalas, puikiai tinkantis įvairioms progoms bei džiuginantis tradiciniu naminiu skoniu.",
       "image": "https://www.lamaistas.lt/uploads/modules/recipes/thumb920x573/15049.jpg"
     },
     {
-      "id": "1741979066296",
-      "title": "Burgeris",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+      "id": "1741992525019",
+      "title": "Kapučino tortas",
+      "description": "Kai pagalvoju apie jausmus užburiančius desertus, pirmoje vietoje atsiduria šokoladinis kapučino tortas. Tai puikus sodraus šokolado ir gaivinančio kapučino skonio derinys. Šis pyragas yra malonumas skonio receptorius ir šventė akims.",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/thumb920x573/52067.jpg"
     },
     {
-      "id": "1741979078120",
-      "title": "Mesyte",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+      "id": "1741992590091",
+      "title": "Tinginys su kondensuotu pienu",
+      "description": "Šis tinginys su kondensuotu pienu ir kakava visada pavyksta skanutėlis ir puikiai sustingsta. Riešutai į tinginį man labai tinka, bet jie nėra būtini - net ir jų neįdėjus, tinginys bus puikus.",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/thumb920x573/28997.jpg"
     },
     {
-      "id": "1741980047856",
-      "title": "Vafliai",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+      "id": "1741992680347",
+      "title": "Vištiena keptuvėje kreminiame morkų ir porų padaže",
+      "description": "Kas gali atsispirti greitiems patiekalams? O jei jie dar ir labai skanūs? Šis patiekalas būtent toks - paprastas, nesudėtingai paruošiamas ir labai gardus, tad ir atsispirti nebūtina! Čiumpame tuos kelis ingredientus, vieną keptuvę ir gaminame. Pietūs ar vakarienė greitai garuos ant stalo ir džiugins šeimyną.",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/without-watermark/48105.jpg"
     },
     {
-      "id": "1741980076080",
-      "title": "Beikonas",
-      "description": "mm",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+      "id": "1741992729107",
+      "title": "Makaronai su malta mėsa ir sūriu",
+      "description": "Patiekalas, kurį ne tik paruošite labai greitai, bet ir labai skaniai suvalgysite, nes skonis puikus, o sūris suteiks nuostabią kreminę natą. Labai skanus, sotus ir žavus patiekalas, kuriam sunku atsispirti, o jei norite, vietoje mėsos galite įdėti daugiau mėgstamų daržovių!",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/thumb920x573/42254.jpg"
     },
     {
-      "id": "1741982922491",
-      "title": "gkkgjkg",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+      "id": "1741992774876",
+      "title": "Sotus kiaulienos plovas",
+      "description": "Sotus kiaulienos plovas – tai labai skanus patiekalas, puikiai tinkantis šaltoms dienoms. Mėsa ir ryžiai susijungia su aromatingais prieskoniais ir daržovėmis, sukuriant tikrą skonio bombą. Šis plovas ne tik patiks mėgstantiems sočius patiekalus, bet ir suteiks energijos visai dienai. Idealiai tinka tiek šeimos pietums, tiek svečių vakarienei. Kiekviena šeimininkė, kas be ko, turi savo firminį plovo receptą. Vieni plovą gamina puode, o kiti orkaitėje, man asmeniškai, plovas labai gardus paruoštas abiais variantais, bet gal truputį labiau mėgstu paruoštą puode, kadangi jis būna toks kiek sulipęs ir šlapesnis.",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/without-watermark/36950.jpg"
+    },
+    {
+      "id": "1741992807212",
+      "title": "Greitas čili troškinys",
+      "description": "Greitai pagaminamas pikantiško skonio troškinys. Galima valgyti vieną arba drauge su ryžiais ar mėgstamais makaronais.",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/without-watermark/24423.jpg"
+    },
+    {
+      "id": "1741992853539",
+      "title": "Tradiciniai kotletai",
+      "description": "Klasikinis patiekalas, kuris niekada nenuvilia! Tobulai subalansuotas skonis, auksinė plutelė ir gardus aromatas sugrąžins į vaikystės pietus. Puikiai tinka su bulvių koše, daržovėmis ar mėgstamu padažu. Išbandykite šį laiko patikrintą receptą ir mėgaukitės naminiu jaukumu!",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/thumb920x573/14552.jpg"
     }
   ],
   "reviews": [
@@ -79,21 +85,21 @@
     },
     {
       "id": "1741975784622",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "Dominykas",
       "text": "Ziauriai gerai prie cs'o sueina",
       "rating": 5
     },
     {
       "id": "1741975970422",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "Domas",
       "text": "Neblogas",
       "rating": 4
     },
     {
       "id": "1741976603989",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "Deividas",
       "text": "Very good very nice",
       "rating": 5
@@ -128,42 +134,42 @@
     },
     {
       "id": "1741978627953",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "asdas",
       "text": "asda",
       "rating": 5
     },
     {
       "id": "1741978656625",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "aasd",
       "text": "asdads",
       "rating": 4
     },
     {
       "id": "1741978781297",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "asd",
       "text": "asd",
       "rating": 2
     },
     {
       "id": "1741978790561",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "asd",
       "text": "asd",
       "rating": 4
     },
     {
       "id": "1741978813809",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "asd",
       "text": "asd",
       "rating": 3
     },
     {
       "id": "1741978892257",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "qwe",
       "text": "qwe",
       "rating": 4
@@ -177,35 +183,35 @@
     },
     {
       "id": "1741978966889",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "eret",
       "text": "ertert",
       "rating": 4
     },
     {
       "id": "1741978986961",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "qweqe",
       "text": "qweq",
       "rating": 5
     },
     {
       "id": "1741979002225",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "qeq",
       "text": "wqweqw",
       "rating": 4
     },
     {
       "id": "1741980009961",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "flojdas",
       "text": "Bigup",
       "rating": 5
     },
     {
       "id": "1741982735555",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "Arsenij",
       "text": "asldjalskdjasdasd",
       "rating": 5
@@ -219,24 +225,87 @@
     },
     {
       "id": "1741982957410",
-      "recipeId": "1741975736654",
+      "recipeId": null,
       "author": "senia",
       "text": "belekaip skanu",
       "rating": 5
     },
     {
       "id": "1741983265434",
-      "recipeId": "1741979066296",
+      "recipeId": null,
       "author": "Senia",
       "text": "ziauriai gerai",
       "rating": 5
     },
     {
       "id": "1741984372256",
-      "recipeId": "1741979066296",
+      "recipeId": null,
       "author": "aar",
       "text": "asras",
       "rating": 5
+    },
+    {
+      "id": "1741992939730",
+      "recipeId": "1741992590091",
+      "author": "Arsenijus",
+      "text": "Nerealus receptas, visuomet paruošiu kuomet laukiu svečių ir visi labai greitai viską suvalgo!",
+      "rating": 5
+    },
+    {
+      "id": "1741992986074",
+      "recipeId": "1741992590091",
+      "author": "Deividas",
+      "text": "Neblogas, bet esu ragavęs geresnių...",
+      "rating": 4
+    },
+    {
+      "id": "1741993014050",
+      "recipeId": "1741992853539",
+      "author": "Tomas",
+      "text": "Fui, nekenčiu kotletų, nerekomenduoju.",
+      "rating": 1
+    },
+    {
+      "id": "1741993146658",
+      "recipeId": "1741976726004",
+      "author": "Zita",
+      "text": "Labai skanūs, anūkam visada prikepu!!",
+      "rating": 5
+    },
+    {
+      "id": "1741993245474",
+      "recipeId": "1741992525019",
+      "author": "Ugnė",
+      "text": "Mano silpnybė... Visada pasidarau, kai norisi kažko nežmogiškai saldaus pasilepinti..",
+      "rating": 5
+    },
+    {
+      "id": "1741993276818",
+      "recipeId": "1741992680347",
+      "author": "Gustas",
+      "text": "Pirma karta dariausi, visai nieko pavyko, ne tobula, bet turbūt pats kaltas :D",
+      "rating": 4
+    },
+    {
+      "id": "1741993300858",
+      "recipeId": "1741992729107",
+      "author": "Luigi",
+      "text": "Mano mama visada darydavo, ir žmona pradėjo daryti, nes pasiilgau mamos makaronų",
+      "rating": 5
+    },
+    {
+      "id": "1741993360386",
+      "recipeId": "1741992774876",
+      "author": "Gaspar",
+      "text": "Labai mėgstu gaminti, dar savo Armėniško twist'o visada įdedu!",
+      "rating": 5
+    },
+    {
+      "id": "1741993467850",
+      "recipeId": "1741992807212",
+      "author": "Valdas",
+      "text": "Tikėjausi, kad bus aštresnis, nerekomenduoju jei mėgstat mega aštriai..",
+      "rating": 3
     }
   ]
 }
