@@ -96,6 +96,37 @@ body {
   margin-top: 100px;
 }
 
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 0 auto 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-bar:focus {
+  border-color: #28a745;
+}
+
+.no-recipes {
+  text-align: center;
+  font-size: 18px;
+  color: #ff0000;
+  margin-top: 20px;
+}
+
 .home-page {
   text-align: center;
 }
@@ -225,6 +256,7 @@ body {
 .page-title {
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .edit-form {
@@ -246,6 +278,7 @@ body {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin: 20px 0;
 }
 
 .save-btn {
@@ -378,6 +411,10 @@ body {
   gap: 10px;
 }
 
+.review-author-input {
+  margin-top: 20px;
+}
+
 .review-author-input, .review-input {
   padding: 10px;
   border: 1px solid #ccc;
@@ -395,6 +432,10 @@ body {
   resize: none;
   overflow: hidden;
   min-height: 40px;
+}
+
+.description-input {
+  margin: 20px 0;
 }
 
 .review-input:focus,

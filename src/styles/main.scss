@@ -103,6 +103,39 @@ body {
   .page-content {
     margin-top: 100px; // Visas puslapio turinys pasislenka žemyn, kad nebūtų po navbaru
   }
+
+  //search baras
+
+  .search-container {
+    display: flex;
+    justify-content: center;  // Centruoja horizontaliai
+    align-items: center;  // Užtikrina gerą vertikalią padėtį
+    flex-direction: column;  // Užtikrina, kad tekstas ir input būtų vienas po kitu
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0 auto 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .search-bar:focus {
+    border-color: #28a745;
+  }
+  
+  .no-recipes {
+    text-align: center;
+    font-size: 18px;
+    color: #ff0000;
+    margin-top: 20px;
+  }
   
   // Receptu saraso stiliai
 .home-page {
@@ -241,6 +274,7 @@ body {
   .page-title {
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: center;
   }
   
   .edit-form {
@@ -262,6 +296,7 @@ body {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin: 20px 0;
   }
   
   .save-btn {
@@ -401,6 +436,11 @@ body {
     flex-direction: column;
     gap: 10px;
   }
+
+  .review-author-input {
+    margin-top: 20px;
+  }
+
   
   .review-author-input, .review-input {
     padding: 10px;
@@ -420,7 +460,9 @@ body {
   overflow: hidden;
   min-height: 40px;
 }
-
+.description-input {
+    margin: 20px 0;
+}
 // Automatinis dydžio keitimas priklausomai nuo teksto kiekio
 .review-input:focus,
 .description-input:focus {

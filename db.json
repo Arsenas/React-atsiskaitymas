@@ -1,36 +1,30 @@
 {
   "recipes": [
     {
-      "id": "1741953987912",
-      "title": "Sigma",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+      "id": "1741959143360",
+      "title": "Picl",
+      "description": "mmm picl",
+      "image": "https://content.imageresizer.com/images/memes/Pickle-meme-6.jpg"
     },
     {
-      "id": "1741954495048",
-      "title": "SigmaSigma",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+      "id": "1741959204089",
+      "title": "spaget",
+      "description": "so yummi",
+      "image": "https://www.shitpostbot.com/img/sourceimages/spaget-tatum-59322e1a85154.jpeg"
     },
     {
-      "id": "1741955723862",
-      "title": "aas",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
-    },
-    {
-      "id": "1741957054612",
-      "title": "aasd",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
-    },
-    {
-      "id": "1741957062075",
-      "title": "asdasd",
-      "description": "Aprašymas nepateiktas. Bet šis receptas vis tiek vertas dėmesio! 🍽️",
-      "image": "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"
+      "id": "1741959282760",
+      "title": "Protein",
+      "description": "Thank you for my muscles mr cow",
+      "image": "https://cdn.britannica.com/53/157153-050-E5582B5A/Holstein-cow.jpg"
     }
   ],
   "favorites": [],
-  "reviews": []
+  "reviews": [
+    {
+      "id": "1741959340600",
+      "text": "very mid page, get good",
+      "author": "Senia"
+    }
+  ]
 }
