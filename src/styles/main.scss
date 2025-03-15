@@ -98,6 +98,9 @@ body {
     font-size: 18px;
     padding: 8px 12px;
     transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; // Smooth transition
+    font-family: 'Bad Script', cursive;
+    font-weight: 600;
+
   
     &:hover {
       transform: scale(1.1); // Slightly enlarges text
@@ -716,7 +719,7 @@ body {
     background-color: #218838;
   }
 
-   .logo, .home-page h2{
+   .logo, .home-page h2 {
     font-family: 'Bad Script', cursive;
   }
 
