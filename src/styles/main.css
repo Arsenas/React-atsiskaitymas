@@ -178,7 +178,7 @@ body {
 }
 
 .favorites-page .recipe-card {
-  margin-left: -20px;
+  margin: -20px;
 }
 
 .reviews-title {
@@ -258,7 +258,7 @@ body {
 }
 
 .recipe-page {
-  max-width: 800px;
+  max-width: 600px;
   margin: 40px auto;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;

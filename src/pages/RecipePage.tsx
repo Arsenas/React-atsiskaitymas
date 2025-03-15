@@ -37,15 +37,16 @@ const RecipePage = () => {
 
   return (
     <div className="recipe-page">
-      <div className="recipe-header">
-        <h2 className="recipe-title">{recipe.title}</h2>
-      </div>
+      
       <div className="recipe-content">
         <img
           src={recipe.image || "https://www.mimisrecipes.com/wp-content/uploads/2018/12/recipe-placeholder-featured.jpg"}
           alt={recipe.title}
           className="recipe-image"
         />
+        <div className="recipe-header">
+        <h2 className="recipe-title">{recipe.title}</h2>
+      </div>
         <div className="recipe-details">
           <p className="recipe-description">{recipe.description || "Aprašymas nepateiktas."}</p>
           {/* Atsiliepimų sekcija */}
