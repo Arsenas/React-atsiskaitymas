@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const AllRecipesPage = () => {
   const { state } = useRecipeContext();
+  console.log("All Recipes:", state.recipes); //Debugging
 
   return (
     <div className="all-recipes-page">

@@ -208,7 +208,8 @@ body {
 }
 
 .favorites-page .recipe-card {
-  margin-left: -20px;
+  margin: -20px;
+  margin-top: 5px;
 }
 
 .reviews-title {
@@ -294,7 +295,7 @@ body {
   // Receptu detaliu puslapis
 
 .recipe-page {
-    max-width: 800px;
+    max-width: 600px;
     margin: 40px auto;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
@@ -463,7 +464,10 @@ body {
   .review-text {
     font-size: 14px;
     color: #333;
+    max-width: 400px;
   }
+  
+  
   
   .review-rating {
     font-size: 18px;
@@ -487,7 +491,6 @@ body {
   .review-card {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
     background-color: #f9f9f9;
     padding: 20px 15px;
     border-radius: 5px;
@@ -615,6 +618,17 @@ body {
     }
   }
 
+  .delete-review-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+  }
+
 
 
   
@@ -727,3 +741,48 @@ body {
     80% { opacity: 1; }
     100% { opacity: 0; }
   }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .modal-text {
+    padding: 20px 0;
+    font-weight: 500;
+
+  }
+  
+  .confirm-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .cancel-btn {
+    background: gray;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  

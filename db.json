@@ -128,25 +128,19 @@
       "rating": 3
     },
     {
-      "id": "1742037238746",
-      "recipeId": "1741992590091",
-      "author": "Arsenij",
-      "text": "Labai Skanu",
-      "rating": 5
-    },
-    {
       "id": "1742039084929",
       "recipeId": "1741976726004",
       "author": "Arnas",
       "text": "Neblogai",
       "rating": 4
-    },
+    }
+  ],
+  "favorites": [
     {
-      "id": "1742039230272",
-      "recipeId": "1741992590091",
-      "author": "Arnas",
-      "text": "Gerai",
-      "rating": 5
+      "id": "1741992590091",
+      "title": "Tinginys su kondensuotu pienu",
+      "description": "Šis tinginys su kondensuotu pienu ir kakava visada pavyksta skanutėlis ir puikiai sustingsta. Riešutai į tinginį man labai tinka, bet jie nėra būtini - net ir jų neįdėjus, tinginys bus puikus.",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/thumb920x573/28997.jpg"
     }
   ]
 }
