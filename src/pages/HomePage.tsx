@@ -15,6 +15,8 @@ const HomePage = () => {
     navigate(`/recipe/${id}`);
   };
 
+
+
   return (
     <div className="home-page">
       <h2>Ieškoti recepto:</h2>
@@ -41,5 +43,6 @@ const HomePage = () => {
     </div>
   );
 };
+
 
 export default HomePage;

@@ -117,6 +117,8 @@ body {
   font-size: 18px;
   color: #ff0000;
   margin-top: 20px;
+  width: 300px;
+  margin-left: -50px;
 }
 
 .search-dropdown {
@@ -175,6 +177,10 @@ body {
   color: #333;
 }
 
+.favorites-page .recipe-card {
+  margin-left: -20px;
+}
+
 .reviews-title {
   text-align: left;
   margin: 10px 0;
@@ -182,11 +188,11 @@ body {
 
 .recipe-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
   gap: 50px;
   max-width: 1000px;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
@@ -214,6 +220,9 @@ body {
   width: 250px;
   text-align: center;
   transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .recipe-card:hover {
