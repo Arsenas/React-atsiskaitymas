@@ -134,5 +134,13 @@
       "text": "Neblogai",
       "rating": 4
     }
+  ],
+  "favorites": [
+    {
+      "id": "1741992590091",
+      "title": "Tinginys su kondensuotu pienu",
+      "description": "Šis tinginys su kondensuotu pienu ir kakava visada pavyksta skanutėlis ir puikiai sustingsta. Riešutai į tinginį man labai tinka, bet jie nėra būtini - net ir jų neįdėjus, tinginys bus puikus.",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/thumb920x573/28997.jpg"
+    }
   ]
 }

@@ -3,12 +3,16 @@ import { useRecipeContext } from "../context/RecipeContext";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import type { Recipe } from "../types/Recipe";
+
 const RecipePage = () => {
   const { id } = useParams<{ id: string }>();
   const { state, dispatch } = useRecipeContext();
   const navigate = useNavigate();
   const recipe = state.recipes.find((r) => r.id === id);
   const [reviewToDelete, setReviewToDelete] = useState<string | null>(null);
+  const [recipeToDelete, setRecipeToDelete] = useState<string | null>(null);
+
 
   if (!recipe) {
     return <p className="error-text">Receptas nerastas...</p>;
@@ -24,6 +28,41 @@ const RecipePage = () => {
       setReviewToDelete(null);
     } catch (error) {
       console.error("Klaida trinant atsiliepimą:", error);
+    }
+  };
+
+  const handleAddToFavorites = async (recipe: Recipe) => {
+    try {
+      // Check if the recipe is already in favorites (avoids duplicates)
+      const response = await axios.get(`http://localhost:5000/favorites?id=${recipe.id}`);
+  
+      if (response.data.length > 0) {
+        return alert("Šis receptas jau yra mėgstamiausiuose!");
+      }
+  
+      // Add the recipe to the favorites in db.json
+      const res = await axios.post("http://localhost:5000/favorites", recipe);
+  
+      // Update UI by dispatching the new favorite
+      dispatch({ type: "ADD_TO_FAVORITES", payload: res.data });
+  
+      alert("Receptas pridėtas prie mėgstamiausių!");
+  
+    } catch (error) {
+      console.error("Klaida pridedant prie mėgstamiausių:", error);
+    }
+  };
+
+  const confirmDeleteRecipe = async () => {
+    if (!recipeToDelete) return;
+  
+    try {
+      await axios.delete(`http://localhost:5000/recipes/${recipeToDelete}`);
+      dispatch({ type: "DELETE_RECIPE", payload: recipeToDelete });
+      setRecipeToDelete(null);
+      navigate("/");
+    } catch (error) {
+      console.error("Klaida trinant receptą:", error);
     }
   };
 
@@ -73,10 +112,23 @@ const RecipePage = () => {
             </div>
           )}
 
+          {/* Custom Modal langas recepto šalinimui */}
+          {recipeToDelete && (
+            <div className="modal-overlay">
+              <div className="modal">
+                <p className="modal-text">Ar tikrai norite pašalinti šį receptą?</p>
+                <div className="modal-buttons">
+                  <button className="confirm-btn" onClick={confirmDeleteRecipe}>Taip</button>
+                  <button className="cancel-btn" onClick={() => setRecipeToDelete(null)}>Atšaukti</button>
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className="button-group">
-            <button className="favorite-btn">Pridėti prie mėgstamiausių</button>
+          <button className="favorite-btn" onClick={() => handleAddToFavorites(recipe)}>Pridėti prie mėgstamiausių</button>
             <Link to={`/edit-recipe/${recipe.id}`} className="edit-btn">Redaguoti receptą</Link>
-            <button className="delete-btn" onClick={() => {}}>Pašalinti receptą</button>
+            <button className="delete-btn" onClick={() => setRecipeToDelete(recipe.id)}>Pašalinti receptą</button>
           </div>
         </div>
       </div>

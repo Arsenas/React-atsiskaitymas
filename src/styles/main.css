@@ -179,6 +179,7 @@ body {
 
 .favorites-page .recipe-card {
   margin: -20px;
+  margin-top: 5px;
 }
 
 .reviews-title {

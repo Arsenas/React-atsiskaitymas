@@ -22,6 +22,7 @@ interface RecipeState {
 // Veiksmų tipai
 type RecipeAction =
   | { type: "SET_RECIPES"; payload: Recipe[] }
+  | { type: "SET_FAVORITES"; payload: Recipe[] }
   | { type: "ADD_TO_FAVORITES"; payload: Recipe }
   | { type: "ADD_REVIEW"; payload: Review }
   | { type: "DELETE_REVIEW"; payload: string }
@@ -45,6 +46,7 @@ const initialState: { recipes: Recipe[]; favorites: Recipe[]; reviews: Review[] 
 const recipeReducer = (state: RecipeState, action: RecipeAction): RecipeState => {
   switch (action.type) {
     case "SET_RECIPES":
+      console.log("Setting Recipes:", action.payload); //Debugging
       return { ...state, recipes: action.payload };
     case "ADD_TO_FAVORITES":
       if (state.favorites.some((recipe) => recipe.id === action.payload.id)) {
@@ -88,21 +90,29 @@ const RecipeProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [recipesRes, reviewsRes] = await Promise.all([
+        const [recipesRes, reviewsRes, favoritesRes] = await Promise.allSettled([
           axios.get("http://localhost:5000/recipes"),
           axios.get("http://localhost:5000/reviews"),
+          axios.get("http://localhost:5000/favorites"),
         ]);
-  
-        dispatch({ 
-          type: "SET_RECIPES", 
-          payload: recipesRes.data });
-
-        dispatch({ 
-          type: "SET_REVIEWS", 
-          payload: reviewsRes.data.filter((review: Review) => review.recipeId !== null) 
-        });     
-        console.log("Fetched Recipes:", recipesRes.data);
-        console.log("Fetched Reviews:", reviewsRes.data);
+    
+        if (recipesRes.status === "fulfilled") {
+          dispatch({ type: "SET_RECIPES", payload: recipesRes.value.data });
+          console.log("Fetched Recipes:", recipesRes.value.data);
+        } else {
+          console.error("Failed to fetch recipes:", recipesRes.reason);
+        }
+    
+        if (reviewsRes.status === "fulfilled") {
+          dispatch({ type: "SET_REVIEWS", payload: reviewsRes.value.data });
+        }
+    
+        if (favoritesRes.status === "fulfilled") {
+          dispatch({ type: "SET_FAVORITES", payload: favoritesRes.value.data });
+        } else {
+          console.warn("Favorites not found, continuing without it.");
+        }
+    
       } catch (error) {
         console.error("Klaida gaunant duomenis:", error);
       }
