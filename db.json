@@ -128,25 +128,11 @@
       "rating": 3
     },
     {
-      "id": "1742037238746",
-      "recipeId": "1741992590091",
-      "author": "Arsenij",
-      "text": "Labai Skanu",
-      "rating": 5
-    },
-    {
       "id": "1742039084929",
       "recipeId": "1741976726004",
       "author": "Arnas",
       "text": "Neblogai",
       "rating": 4
-    },
-    {
-      "id": "1742039230272",
-      "recipeId": "1741992590091",
-      "author": "Arnas",
-      "text": "Gerai",
-      "rating": 5
     }
   ]
 }
