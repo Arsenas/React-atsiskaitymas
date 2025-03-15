@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const FavoritesPage = () => {
   const { state } = useRecipeContext();
+  console.log("Current Favorites:", state.favorites); //Debugging
   const [searchTerm] = useState("");
   
 
