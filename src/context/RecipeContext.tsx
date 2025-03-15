@@ -70,6 +70,9 @@ const recipeReducer = (state: RecipeState, action: RecipeAction): RecipeState =>
     ...state,
     reviews: state.reviews.filter((review) => review.id !== action.payload),
   };
+  case "SET_FAVORITES":
+  console.log("Setting Favorites:", action.payload); //Debugging
+  return { ...state, favorites: action.payload };
   case "EDIT_RECIPE":
     return {
       ...state,
@@ -108,6 +111,7 @@ const RecipeProvider = ({ children }: { children: ReactNode }) => {
         }
     
         if (favoritesRes.status === "fulfilled") {
+          console.log("Fetched Favorites:", favoritesRes.value.data); //Debugging
           dispatch({ type: "SET_FAVORITES", payload: favoritesRes.value.data });
         } else {
           console.warn("Favorites not found, continuing without it.");

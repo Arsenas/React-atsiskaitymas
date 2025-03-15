@@ -51,20 +51,6 @@
   ],
   "reviews": [
     {
-      "id": "1741977395731",
-      "recipeId": "1741976726004",
-      "author": "Deimantas",
-      "text": "Labai skanu labai gerai labai faina",
-      "rating": 4
-    },
-    {
-      "id": "1741982889467",
-      "recipeId": "1741976726004",
-      "author": "Senia",
-      "text": "labai patiko ir skanus",
-      "rating": 5
-    },
-    {
       "id": "1741992939730",
       "recipeId": "1741992590091",
       "author": "Arsenijus",
@@ -141,6 +127,24 @@
       "title": "Tinginys su kondensuotu pienu",
       "description": "Šis tinginys su kondensuotu pienu ir kakava visada pavyksta skanutėlis ir puikiai sustingsta. Riešutai į tinginį man labai tinka, bet jie nėra būtini - net ir jų neįdėjus, tinginys bus puikus.",
       "image": "https://www.lamaistas.lt/uploads/modules/recipes/thumb920x573/28997.jpg"
+    },
+    {
+      "id": "1741992680347",
+      "title": "Vištiena keptuvėje kreminiame morkų ir porų padaže",
+      "description": "Kas gali atsispirti greitiems patiekalams? O jei jie dar ir labai skanūs? Šis patiekalas būtent toks - paprastas, nesudėtingai paruošiamas ir labai gardus, tad ir atsispirti nebūtina! Čiumpame tuos kelis ingredientus, vieną keptuvę ir gaminame. Pietūs ar vakarienė greitai garuos ant stalo ir džiugins šeimyną.",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/without-watermark/48105.jpg"
+    },
+    {
+      "id": "1741976726004",
+      "title": "Klasikiniai varškėčiai",
+      "description": "Lengvi ir purūs varškėčiai, kurie yra itin populiarūs tiek pusryčiams, tiek kaip desertas. Varškėčiams būdingas švelnus varškės skonis ir minkšta tekstūra, kurią galima papildyti vanile ar citrinos žievele, suteikiant gaivumo. Jie kepami iki auksinės spalvos ir patiekiami su grietine, medumi, uogiene ar šviežiomis uogomis. Tai paprastas, tačiau skanus ir sotus patiekalas, puikiai tinkantis įvairioms progoms bei džiuginantis tradiciniu naminiu skoniu.",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/thumb920x573/15049.jpg"
+    },
+    {
+      "id": "1741992774876",
+      "title": "Sotus kiaulienos plovas",
+      "description": "Sotus kiaulienos plovas – tai labai skanus patiekalas, puikiai tinkantis šaltoms dienoms. Mėsa ir ryžiai susijungia su aromatingais prieskoniais ir daržovėmis, sukuriant tikrą skonio bombą. Šis plovas ne tik patiks mėgstantiems sočius patiekalus, bet ir suteiks energijos visai dienai. Idealiai tinka tiek šeimos pietums, tiek svečių vakarienei. Kiekviena šeimininkė, kas be ko, turi savo firminį plovo receptą. Vieni plovą gamina puode, o kiti orkaitėje, man asmeniškai, plovas labai gardus paruoštas abiais variantais, bet gal truputį labiau mėgstu paruoštą puode, kadangi jis būna toks kiek sulipęs ir šlapesnis.",
+      "image": "https://www.lamaistas.lt/uploads/modules/recipes/without-watermark/36950.jpg"
     }
   ]
 }
