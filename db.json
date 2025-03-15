@@ -51,67 +51,6 @@
   ],
   "reviews": [
     {
-      "id": "101",
-      "recipeId": null,
-      "author": "Jonas",
-      "text": "Labai skanus receptas! Rekomenduoju.",
-      "rating": 5
-    },
-    {
-      "id": "1741975159879",
-      "recipeId": null,
-      "author": "Arsenij",
-      "text": "Geras"
-    },
-    {
-      "id": "1741975307407",
-      "recipeId": null,
-      "author": "Arsenijus",
-      "text": "Labai patiko ir butinai dar karta gaminsiu!"
-    },
-    {
-      "id": "1741975559918",
-      "recipeId": null,
-      "author": "Deividas",
-      "text": "Ziauriai geraS!",
-      "rating": 5
-    },
-    {
-      "id": "1741975591310",
-      "recipeId": null,
-      "author": "Arsenij",
-      "text": "Geras",
-      "rating": 1
-    },
-    {
-      "id": "1741975784622",
-      "recipeId": null,
-      "author": "Dominykas",
-      "text": "Ziauriai gerai prie cs'o sueina",
-      "rating": 5
-    },
-    {
-      "id": "1741975970422",
-      "recipeId": null,
-      "author": "Domas",
-      "text": "Neblogas",
-      "rating": 4
-    },
-    {
-      "id": "1741976603989",
-      "recipeId": null,
-      "author": "Deividas",
-      "text": "Very good very nice",
-      "rating": 5
-    },
-    {
-      "id": "1741976748524",
-      "recipeId": "1741976726004",
-      "author": "Arsenijus",
-      "text": "Nu zinokit nerealiai, labai Lengvi ir purūs varškėčiai, kurie yra itin populiarūs tiek pusryčiams, tiek kaip desertas. Varškėčiams būdingas švelnus varškės skonis ir minkšta tekstūra, kurią galima papildyti vanile ar citrinos žievele, suteikiant gaivumo. Jie kepami iki auksinės spalvos ir patiekiami su grietine, medumi, uogiene ar šviežiomis uogomis. Tai paprastas, tačiau skanus ir sotus patiekalas, puikiai tinkantis įvairioms progoms bei džiuginantis tradiciniu naminiu skoniu.",
-      "rating": 5
-    },
-    {
       "id": "1741977395731",
       "recipeId": "1741976726004",
       "author": "Deimantas",
@@ -119,129 +58,10 @@
       "rating": 4
     },
     {
-      "id": "1741978288402",
-      "recipeId": "1741976726004",
-      "author": "Arsenij",
-      "text": "Grazu",
-      "rating": 5
-    },
-    {
-      "id": "1741978562866",
-      "recipeId": "1741976726004",
-      "author": "asasf",
-      "text": "asdas",
-      "rating": 5
-    },
-    {
-      "id": "1741978627953",
-      "recipeId": null,
-      "author": "asdas",
-      "text": "asda",
-      "rating": 5
-    },
-    {
-      "id": "1741978656625",
-      "recipeId": null,
-      "author": "aasd",
-      "text": "asdads",
-      "rating": 4
-    },
-    {
-      "id": "1741978781297",
-      "recipeId": null,
-      "author": "asd",
-      "text": "asd",
-      "rating": 2
-    },
-    {
-      "id": "1741978790561",
-      "recipeId": null,
-      "author": "asd",
-      "text": "asd",
-      "rating": 4
-    },
-    {
-      "id": "1741978813809",
-      "recipeId": null,
-      "author": "asd",
-      "text": "asd",
-      "rating": 3
-    },
-    {
-      "id": "1741978892257",
-      "recipeId": null,
-      "author": "qwe",
-      "text": "qwe",
-      "rating": 4
-    },
-    {
-      "id": "1741978954185",
-      "recipeId": "1741976726004",
-      "author": "fjfgh",
-      "text": "fghfgh",
-      "rating": 5
-    },
-    {
-      "id": "1741978966889",
-      "recipeId": null,
-      "author": "eret",
-      "text": "ertert",
-      "rating": 4
-    },
-    {
-      "id": "1741978986961",
-      "recipeId": null,
-      "author": "qweqe",
-      "text": "qweq",
-      "rating": 5
-    },
-    {
-      "id": "1741979002225",
-      "recipeId": null,
-      "author": "qeq",
-      "text": "wqweqw",
-      "rating": 4
-    },
-    {
-      "id": "1741980009961",
-      "recipeId": null,
-      "author": "flojdas",
-      "text": "Bigup",
-      "rating": 5
-    },
-    {
-      "id": "1741982735555",
-      "recipeId": null,
-      "author": "Arsenij",
-      "text": "asldjalskdjasdasd",
-      "rating": 5
-    },
-    {
       "id": "1741982889467",
       "recipeId": "1741976726004",
       "author": "Senia",
       "text": "labai patiko ir skanus",
-      "rating": 5
-    },
-    {
-      "id": "1741982957410",
-      "recipeId": null,
-      "author": "senia",
-      "text": "belekaip skanu",
-      "rating": 5
-    },
-    {
-      "id": "1741983265434",
-      "recipeId": null,
-      "author": "Senia",
-      "text": "ziauriai gerai",
-      "rating": 5
-    },
-    {
-      "id": "1741984372256",
-      "recipeId": null,
-      "author": "aar",
-      "text": "asras",
       "rating": 5
     },
     {
@@ -306,6 +126,27 @@
       "author": "Valdas",
       "text": "Tikėjausi, kad bus aštresnis, nerekomenduoju jei mėgstat mega aštriai..",
       "rating": 3
+    },
+    {
+      "id": "1742037238746",
+      "recipeId": "1741992590091",
+      "author": "Arsenij",
+      "text": "Labai Skanu",
+      "rating": 5
+    },
+    {
+      "id": "1742039084929",
+      "recipeId": "1741976726004",
+      "author": "Arnas",
+      "text": "Neblogai",
+      "rating": 4
+    },
+    {
+      "id": "1742039230272",
+      "recipeId": "1741992590091",
+      "author": "Arnas",
+      "text": "Gerai",
+      "rating": 5
     }
   ]
 }

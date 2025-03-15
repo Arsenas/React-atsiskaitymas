@@ -12,7 +12,8 @@ const RecipePage = () => {
     return <p className="error-text">Receptas nerastas...</p>;
   }
 
-  const recipeReviews = state.reviews.filter((review) => review.recipeId === id); // Tik su šiuo receptu susiję atsiliepimai
+  const recipeReviews = state.reviews.filter((review) => String(review.recipeId) === String(id));
+ // Tik su šiuo receptu susiję atsiliepimai
 
   const handleAddToFavorites = () => {
     if (!recipe || state.favorites.some((fav) => fav.id === recipe.id)) return; // Avoid duplicate favorites

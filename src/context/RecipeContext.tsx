@@ -37,7 +37,7 @@ const RecipeContext = createContext<{ state: RecipeState; dispatch: React.Dispat
 const initialState: { recipes: Recipe[]; favorites: Recipe[]; reviews: Review[] } = {
   recipes: [],
   favorites: [],
-  reviews: [], // Pridėta, kad atitiktų tipą
+  reviews: [],
 };
 
 
@@ -59,8 +59,9 @@ const recipeReducer = (state: RecipeState, action: RecipeAction): RecipeState =>
       };
       case "ADD_REVIEW":
   return { ...state, reviews: [...state.reviews, action.payload] };
-      case "SET_REVIEWS":
-  return { ...state, reviews: action.payload };
+  case "SET_REVIEWS":
+    return { ...state, reviews: action.payload.filter((review) => review.recipeId !== null) };
+  
 
       case "DELETE_REVIEW":
   return {
@@ -85,10 +86,31 @@ const RecipeProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(recipeReducer, initialState);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/recipes")
-      .then((response) => dispatch({ type: "SET_RECIPES", payload: response.data }))
-      .catch((error) => console.error("Klaida gaunant receptus", error));
+    const fetchData = async () => {
+      try {
+        const [recipesRes, reviewsRes] = await Promise.all([
+          axios.get("http://localhost:5000/recipes"),
+          axios.get("http://localhost:5000/reviews"),
+        ]);
+  
+        dispatch({ 
+          type: "SET_RECIPES", 
+          payload: recipesRes.data });
+
+        dispatch({ 
+          type: "SET_REVIEWS", 
+          payload: reviewsRes.data.filter((review: Review) => review.recipeId !== null) 
+        });     
+        console.log("Fetched Recipes:", recipesRes.data);
+        console.log("Fetched Reviews:", reviewsRes.data);
+      } catch (error) {
+        console.error("Klaida gaunant duomenis:", error);
+      }
+    };
+  
+    fetchData();
   }, []);
+  
 
   return (
     <RecipeContext.Provider value={{ state, dispatch }}>

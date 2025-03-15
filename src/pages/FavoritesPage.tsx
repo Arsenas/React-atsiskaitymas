@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 
 const FavoritesPage = () => {
   const { state } = useRecipeContext();
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm] = useState("");
+  
 
   const filteredFavorites = state.favorites.filter((recipe) =>
     recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  
 
   return (
     <div className="favorites-page">
@@ -23,7 +25,7 @@ const FavoritesPage = () => {
             </div>
           ))
         ) : (
-          <p className="no-recipes">Nėra mėgstamiausių receptų pagal šį pavadinimą.</p>
+          <p className="no-recipes">Šiuo metu mėgstamiausių receptų neturite.</p>
         )}
       </div>
     </div>
